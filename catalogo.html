@@ -1,0 +1,512 @@
+<!doctype html>
+<html class="scroll-smooth scroll-pt-24" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description"
+    content="Catálogo de tablas de surf Quiver Surf Fun. Encuentra la tabla perfecta para tu nivel en Lobitos, Perú.">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/webp/surf-fun-logo.webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/webp/surf-fun-logo.webp">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/webp/surf-fun-logo.webp">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  <title>Catálogo de Tablas | Surf Fun Experience</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@300;400;600;700;800&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="css/catalogo.css">
+</head>
+
+<body class="text-white extracted-style-1">
+
+  <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-[#00E5FF] z-[200] transition-all duration-75"
+    style="width: 0%;"></div>
+
+  <!-- ===== FLOATING PILL NAVBAR ===== -->
+  <nav id="navScroll" class="fixed">
+    <div class="nav-inner extracted-style-4">
+
+      <!-- LOGO -->
+      <div class="extracted-style-5">
+        <a href="index.html" aria-label="Surf Fun Experience">
+          <img src="img/webp/surf-fun-logo.webp" alt="Surf Fun Experience Logo" class="extracted-style-6">
+        </a>
+      </div>
+
+      <!-- CENTER: Nav links -->
+      <div class="hidden md:flex extracted-style-7">
+        <ul class="pill-nav-links extracted-style-8">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#alquiler">Alquiler</a></li>
+          <li><a href="catalogo.html" class="hover:text-[#00E5FF] transition-colors">Catálogo</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: Lang + CTA + Hamburger -->
+      <div class="extracted-style-9">
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="pill-lang-selector hidden lg:flex">
+          <button class="pill-lang-btn active" data-lang="es">ES</button>
+          <span class="pill-lang-divider">|</span>
+          <button class="pill-lang-btn" data-lang="en">EN</button>
+          <span class="pill-lang-divider">|</span>
+          <button class="pill-lang-btn" data-lang="pt">PT</button>
+        </div>
+
+        <!-- DESKTOP CTA -->
+        <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
+          rel="noopener noreferrer" class="pill-cta hidden md:inline-block">Reserva tu clase</a>
+
+        <!-- HAMBURGER -->
+        <button id="menu-btn"
+          class="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-[6px] focus:outline-none"
+          aria-label="Abrir menú">
+          <span id="line-1" class="w-7 h-[2px] bg-white rounded-full transition-all duration-500 origin-center"></span>
+          <span id="line-2" class="w-7 h-[2px] bg-white rounded-full transition-all duration-500 origin-center"></span>
+          <span id="line-3" class="w-7 h-[2px] bg-white rounded-full transition-all duration-500 origin-center"></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE FULL-SCREEN MENU -->
+  <div id="mobile-menu"
+    class="fixed inset-0 w-screen h-[100dvh] bg-[#07131D]/95 backdrop-blur-2xl z-[110] flex flex-col items-center justify-center gap-10 opacity-0 pointer-events-none transition-opacity duration-500 md:hidden">
+    <button id="close-menu-btn"
+      class="absolute top-8 right-6 text-white hover:text-[#00E5FF] p-2 z-[130] focus:outline-none md:hidden">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <a href="#servicios"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Servicios</a>
+    <a href="#precios"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Precios</a>
+    <a href="#alquiler"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Alquiler</a>
+    <a href="catalogo.html"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Catálogo</a>
+    <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
+      class="mobile-link mt-8 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-500 translate-y-8 opacity-0">Reserva
+      tu clase</a>
+  </div>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <div class="relative w-full pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="img/local-tablas.jpg" alt="Rack de tablas Surf Fun" class="w-full h-full object-cover object-center">
+        <div class="absolute inset-0 bg-[#07131D]/30 bg-gradient-to-b from-[#07131D]/60 via-transparent to-[#07131D]">
+        </div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <p class="text-[#00E5FF] font-bold tracking-[0.2em] text-sm md:text-base mb-4 uppercase">NUESTRO QUIVER</p>
+        <h1 class="text-5xl md:text-7xl font-serif text-white mb-6">Encuentra tu <span
+            class="text-[#00E5FF] italic">tabla</span></h1>
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto">Tablas de surf para todos los niveles y condiciones. Explora
+          nuestro catálogo y reserva tu equipo para correr en Lobitos.</p>
+      </div>
+    </div>
+
+    <!-- ===== POLÍTICAS DE ALQUILER ===== -->
+    <section class="max-w-5xl mx-auto px-6 py-10">
+      <div class="border border-[#00E5FF]/30 bg-[#00E5FF]/5 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+        <div class="flex items-start gap-4 mb-5">
+          <div class="shrink-0 w-10 h-10 rounded-full bg-[#00E5FF]/15 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#00E5FF" viewBox="0 0 16 16">
+              <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.399l-.502.002-.026-.12L8.41 6.28h1.09l-.57 4.308zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-white font-bold text-lg mb-1 extracted-style-8">
+              Políticas de Alquiler de Tablas</h3>
+            <p class="text-slate-400 text-sm">Antes de elegir tu tabla, ten en cuenta las siguientes condiciones:</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-slate-300 text-sm md:text-base">
+          <li class="flex items-start gap-3">
+            <span
+              class="shrink-0 mt-1 w-5 h-5 rounded-full bg-[#00E5FF]/15 flex items-center justify-center text-[#00E5FF] text-xs font-bold">1</span>
+            <span>Las tablas no presentan ningún quiñe al momento de ser entregadas al cliente. Se recomienda revisar la
+              tabla antes de usarla.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span
+              class="shrink-0 mt-1 w-5 h-5 rounded-full bg-[#00E5FF]/15 flex items-center justify-center text-[#00E5FF] text-xs font-bold">2</span>
+            <span>Si se hace algún tipo de quiñe o se parte la tabla, tendrá un valor extra que se evaluará según el
+              daño causado.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span
+              class="shrink-0 mt-1 w-5 h-5 rounded-full bg-[#00E5FF]/15 flex items-center justify-center text-[#00E5FF] text-xs font-bold">3</span>
+            <span>El cliente puede cambiar la tabla por otra si lo desea, sujeto a disponibilidad.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CATÁLOGO DE TABLAS ===== -->
+    <section id="catalogo" class="py-20 bg-[#e0edfa]">
+      <div class="max-w-7xl mx-auto px-6 pt-8 pb-4">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-2">
+          <div>
+            <p class="text-blue-600 text-xs font-bold tracking-[0.2em] uppercase mb-3">Nuestro Quiver</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-slate-900 leading-tight">
+              Encuentra tu <span class="italic text-blue-600">tabla</span>
+            </h2>
+          </div>
+          <p class="text-slate-600 text-sm">26 tablas · Ordenadas por volumen</p>
+        </div>
+        <div class="w-16 h-1 bg-blue-600 rounded-full mt-4 mb-8"></div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-6 mt-12 mb-8 flex flex-wrap justify-center gap-4">
+        <button onclick="filterBoards('todos')"
+          class="filter-btn active px-6 py-2 rounded-full border border-[#00E5FF] bg-[#00E5FF] text-[#07131D] font-bold transition-all shadow-sm">Todos</button>
+        <button onclick="filterBoards('shortboard')"
+          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm">Shortboards</button>
+        <button onclick="filterBoards('funboard')"
+          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm">Funboards</button>
+        <button onclick="filterBoards('longboard')"
+          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm">Longboards</button>
+      </div>
+
+      <div id="catalog-grid"
+        class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 px-4 md:px-6 pb-24">
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">¿Listo para <span
+            class="italic text-[#00E5FF]">surfear</span>?</h2>
+        <p class="text-slate-300 text-lg mb-10 max-w-xl mx-auto">Contáctanos por WhatsApp para reservar tu tabla o
+          agendar una clase. ¡Te esperamos en Lobitos!</p>
+        <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20alquilar%20una%20tabla" target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-3 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_4px_20px_rgba(0,229,255,0.35)]">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+            <path
+              d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.325-.336-.445-.342-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+          </svg>
+          Alquilar por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="position-relative overflow-hidden extracted-style-64">
+
+
+    <!-- Enlaces y Redes Sociales (Pill-shaped Button Cluster) -->
+    <div class="footer-pill-container">
+      <a href="#servicios" class="footer-pill">Servicios</a>
+      <a href="#precios" class="footer-pill">Precios</a>
+      <a href="#alquiler" class="footer-pill">Alquiler</a>
+      <a href="#" class="footer-pill">Términos</a>
+      <a href="#" class="footer-pill">Privacidad</a>
+      <a href="https://instagram.com/surfun_experience" target="_blank" rel="noopener noreferrer"
+        class="footer-pill">Instagram</a>
+    </div>
+
+    <!-- El Logotipo Gigante -->
+    <div class="w-100 px-4 mx-auto extracted-style-65">
+      <img src="img/surf-fun-footer.png" alt="Surf Fun Experience"
+        class="w-100 h-auto pe-none user-select-none extracted-style-66">
+    </div>
+
+    <!-- Barra Inferior (Copyright) -->
+    <div
+      class="w-100 mx-auto px-4 d-flex flex-column flex-md-row justify-content-between align-items-center extracted-style-67">
+      <span>Copyright &copy; 2026 Surf Fun Experience</span>
+      <span class="mt-2 mt-md-0">Hecho en Lobitos</span>
+    </div>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+      const line1 = document.getElementById('line-1');
+      const line2 = document.getElementById('line-2');
+      const line3 = document.getElementById('line-3');
+
+      let isOpen = false;
+
+      function toggleMenu() {
+        isOpen = !isOpen;
+
+        // Animación de hamburguesa a "X"
+        if (isOpen) {
+          line1.classList.add('rotate-45', 'translate-y-[8px]');
+          line2.classList.add('opacity-0', 'translate-x-4');
+          line3.classList.add('-rotate-45', '-translate-y-[8px]');
+
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = 'hidden';
+
+          // Animación escalonada enlaces
+          mobileLinks.forEach((link, index) => {
+            setTimeout(() => {
+              link.classList.remove('translate-y-8', 'opacity-0');
+            }, 100 * (index + 1));
+          });
+        } else {
+          line1.classList.remove('rotate-45', 'translate-y-[8px]');
+          line2.classList.remove('opacity-0', 'translate-x-4');
+          line3.classList.remove('-rotate-45', '-translate-y-[8px]');
+
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = '';
+
+          mobileLinks.forEach(link => {
+            link.classList.add('translate-y-8', 'opacity-0');
+          });
+        }
+      }
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', toggleMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (isOpen) toggleMenu();
+          });
+        });
+      }
+
+      // Scroll: añade clase .scrolled al nav para intensificar el fondo
+      const nav = document.getElementById('navScroll');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > nav.offsetHeight) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+      }
+    });
+  </script>
+
+  <!-- ===== MODAL CONTAINER ===== -->
+  <div id="modal-container"
+    class="fixed inset-0 z-[200] hidden bg-[#07131D]/90 backdrop-blur-md overflow-y-auto p-4 flex justify-center items-start md:items-center pt-12 md:pt-4">
+    <div
+      class="bg-[#0f2336] border border-white/10 rounded-3xl w-full max-w-4xl md:max-w-5xl max-h-[90vh] overflow-y-auto flex flex-col relative">
+      <!-- Close button -->
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 text-white hover:text-[#00E5FF] z-10 p-2 transition-colors">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+      <!-- Dynamic content -->
+      <div id="modal-content" class="p-6 md:p-10">
+        <!-- Content will be injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL SCRIPT ===== -->
+  <script>
+    // 1. BASE DE DATOS DE TABLAS (Basado en la estructura de archivos del usuario)
+    const tablasData = [
+      { id: 1, name: "Joso", specs: "5'8\" | 24L", cat: "shortboard", prefix: "joso", imgCount: 3 },
+      { id: 2, name: "Erick Arakawua", specs: "5'10\" | 27L", cat: "shortboard", prefix: "erik", imgCount: 3 },
+      { id: 3, name: "Klimax", specs: "5'10\" | 27.3L", cat: "shortboard", prefix: "Klimax", imgCount: 3 },
+      { id: 4, name: "Chili", specs: "5'11\" | 27.5L", cat: "shortboard", prefix: "chili", imgCount: 3 },
+      { id: 5, name: "MSD - Epoxy", specs: "5'10\" | 28.8L", cat: "shortboard", prefix: "msd", imgCount: 3 },
+      { id: 6, name: "KLIMAX", specs: "5'11\" | 29.6L", cat: "shortboard", prefix: "KLIMAX-v2-", imgCount: 3 },
+      { id: 7, name: "JHP - Epoxy", specs: "5'7\" | 30L", cat: "shortboard", prefix: "jhp", imgCount: 3 },
+      { id: 8, name: "Town & Country", specs: "5'10\" | 31.89L", cat: "shortboard", prefix: "Town", imgCount: 3 },
+      { id: 9, name: "7 SURFBOARDS", specs: "6'0\" | 32.5L", cat: "shortboard", prefix: "SURFBOARDS", imgCount: 3 },
+      { id: 10, name: "CI", specs: "6'1\" | 33L", cat: "shortboard", prefix: "CI", imgCount: 2 },
+      { id: 11, name: "CLEAR", specs: "6'0\" | 34L", cat: "shortboard", prefix: "CLEAR", imgCount: 3 },
+      { id: 12, name: "Chili", specs: "6'8\" | 35.36L", cat: "funboard", prefix: "Chili-v2-", imgCount: 3 },
+      { id: 13, name: "B Shaper", specs: "6'1\" | 36L", cat: "shortboard", prefix: "Shaper", imgCount: 2 },
+      { id: 14, name: "BRASILEÑA", specs: "6'8\" | 36L", cat: "funboard", prefix: "BRASILEÑA", imgCount: 3 },
+      { id: 15, name: "Martinez", specs: "6'7\" | 38L", cat: "funboard", prefix: "Martinez", imgCount: 2 },
+      { id: 16, name: "Surf Point", specs: "6'6\" | 41L", cat: "funboard", prefix: "Surf-Point", imgCount: 2 },
+      { id: 17, name: "Marea", specs: "6'6\" | 41L", cat: "funboard", prefix: "Marea", imgCount: 3 },
+      { id: 18, name: "B Shaper", specs: "6'7\" | 45L", cat: "funboard", prefix: "Shaper-v2-", imgCount: 2 },
+      { id: 19, name: "Klimax", specs: "7'3\" | 52L", cat: "funboard", prefix: "KLIMAX-v3-", imgCount: 2 },
+      { id: 20, name: "Klimax", specs: "7'4\" | 53.6L", cat: "funboard", prefix: "KLIMAX-v4-", imgCount: 3 },
+      { id: 21, name: "B Shaper", specs: "7'0\" | 55.4L", cat: "funboard", prefix: "Shaper-v3-", imgCount: 3 },
+      { id: 22, name: "B Shaper", specs: "7'2\" | 57L", cat: "funboard", prefix: "Shaper-v4-", imgCount: 3 },
+      { id: 23, name: "SoftBoard Sunset", specs: "7'5\" | 60L", cat: "funboard", prefix: "SoftBoard", imgCount: 3 },
+      { id: 24, name: "B SHAPER", specs: "7'6\" | 60L", cat: "funboard", prefix: "Shaper-v5-", imgCount: 2 },
+      { id: 25, name: "Longboard Quiver", specs: "9'1\" | 64L", cat: "longboard", prefix: "Longboard", imgCount: 3 },
+      { id: 26, name: "Longboard Wayo Whilar", specs: "9'3\" | 81L", cat: "longboard", prefix: "Longboard-v2-", imgCount: 3 }
+    ];
+
+    // 2. LÓGICA DE RENDERIZADO Y FILTROS (ANIMADO)
+    const grid = document.getElementById('catalog-grid');
+
+    // Cargar todas las tablas al inicio una sola vez
+    function initGrid() {
+      grid.innerHTML = '';
+      tablasData.forEach(tabla => {
+        const cardHtml = `
+          <div class="tabla-card transition-all duration-500 ease-in-out transform flex flex-col h-full opacity-100 scale-100 bg-white border border-slate-100 shadow-md rounded-2xl p-4 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="${tabla.cat}" onclick="openModal(${tabla.id})">
+            <div class="aspect-[3/4] bg-slate-50 rounded-xl overflow-hidden mb-4 flex items-center justify-center relative group">
+              <img src="img/tablas/${tabla.prefix}1.png" class="object-contain w-full h-full p-2 transition-transform duration-500 group-hover:scale-110" alt="${tabla.name}" loading="lazy">
+              <div class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+                  <span class="bg-[#00E5FF] text-[#07131D] px-5 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">+ Ver detalles</span>
+              </div>
+            </div>
+            <div class="mt-auto">
+              <h3 class="text-slate-900 font-bold text-sm md:text-base leading-tight">${tabla.name}</h3>
+              <p class="text-blue-600 font-medium text-xs md:text-sm mt-1">${tabla.specs}</p>
+            </div>
+          </div>
+        `;
+        grid.innerHTML += cardHtml;
+      });
+    }
+
+    function filterBoards(category) {
+      // Actualizar estado visual de los botones
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.getAttribute('onclick').includes(category)) {
+          btn.className = "filter-btn active px-6 py-2 rounded-full border border-[#00E5FF] bg-[#00E5FF] text-[#07131D] font-bold transition-all shadow-sm";
+        } else {
+          btn.className = "filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm";
+        }
+      });
+
+      // Animación de filtrado
+      const cards = document.querySelectorAll('.tabla-card');
+
+      cards.forEach(card => {
+        // 1. Desvanecer y encoger
+        card.classList.remove('opacity-100', 'scale-100');
+        card.classList.add('opacity-0', 'scale-95');
+
+        // 2. Esperar que termine la animación, luego reorganizar y revelar
+        setTimeout(() => {
+          if (category === 'todos' || card.dataset.category === category) {
+            card.style.display = 'flex'; // Mostrar en el DOM
+
+            // Forzar reflujo para que la transición funcione de display:none a block
+            requestAnimationFrame(() => {
+              card.classList.remove('opacity-0', 'scale-95');
+              card.classList.add('opacity-100', 'scale-100');
+            });
+          } else {
+            card.style.display = 'none'; // Quitar del DOM
+          }
+        }, 400); // 400ms = tiempo que tarda en desvanecerse
+      });
+    }
+
+    // 3. LÓGICA DEL MODAL (Galería Interactiva)
+    function openModal(id) {
+      const tabla = tablasData.find(t => t.id === id);
+      const container = document.getElementById('modal-container');
+      const contentDiv = document.getElementById('modal-content');
+
+      // Generar tags de miniaturas (Thumbnails)
+      let thumbnailsHtml = '';
+      for (let i = 1; i <= tabla.imgCount; i++) {
+        const imgSrc = `img/tablas/${tabla.prefix}${i}.png`;
+        // El onclick cambia el src de la imagen principal por el de la miniatura seleccionada
+        thumbnailsHtml += `
+          <div onclick="document.getElementById('main-modal-img').src='${imgSrc}'" class="bg-black/20 rounded-xl overflow-hidden flex items-center justify-center p-2 aspect-[3/4] md:aspect-auto md:h-full cursor-pointer border-2 border-transparent hover:border-[#00E5FF] transition-all shrink-0">
+            <img src="${imgSrc}" class="object-contain md:object-cover w-full h-full" alt="Vista ${i}" loading="lazy">
+          </div>
+        `;
+      }
+
+      // Armar el interior del modal calcando la maqueta UI
+      contentDiv.innerHTML = `
+        <div class="mb-5 flex flex-col gap-4">
+          <div>
+              <h2 class="text-3xl md:text-4xl font-serif text-white mb-1">${tabla.name}</h2>
+              <p class="text-lg text-[#00E5FF] font-bold">${tabla.specs}</p>
+          </div>
+          <a href="https://wa.me/51991372918?text=Hola!%20Me%20interesa%20alquilar%20la%20tabla%20${encodeURIComponent(tabla.name)}%20(${encodeURIComponent(tabla.specs)})" target="_blank" class="w-full bg-[#00E5FF] text-[#07131D] font-bold px-6 py-3 rounded-full text-center hover:scale-105 transition-transform">
+            Alquilar esta tabla
+          </a>
+        </div>
+
+        <div class="flex gap-3 h-[350px] md:h-[500px]">
+          <div class="w-2/3 md:w-[70%] bg-black/20 rounded-xl flex items-center justify-center p-2 h-full">
+            <img id="main-modal-img" src="img/tablas/${tabla.prefix}1.png" class="object-contain w-full h-full transition-all duration-300" alt="${tabla.name} principal">
+          </div>
+          <div class="w-1/3 md:w-[30%] flex flex-col md:grid md:grid-rows-${tabla.imgCount} gap-3 overflow-y-auto md:overflow-hidden pr-1 md:pr-0 h-full">
+            ${thumbnailsHtml}
+          </div>
+        </div>
+      `;
+
+      container.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      if (typeof lenis !== 'undefined') lenis.stop();
+    }
+
+    function closeModal() {
+      document.getElementById('modal-container').classList.add('hidden');
+      document.body.style.overflow = '';
+      // Reactivar Lenis al cerrar
+      if (typeof lenis !== 'undefined') lenis.start();
+    }
+
+    // Cerrar el modal al hacer clic en el fondo oscuro (fuera de la tarjeta)
+    document.getElementById('modal-container').addEventListener('click', function (e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+
+    // Inicializar todo al cargar el documento (reemplazar la llamada anterior)
+    document.addEventListener('DOMContentLoaded', () => {
+      initGrid();
+    });
+
+    // Lógica para la barra de progreso superior
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      const progressBar = document.getElementById('scroll-progress');
+      if (progressBar) {
+        progressBar.style.width = scrollPercent + '%';
+      }
+    });
+  </script>
+
+  <!-- ===== LENIS SMOOTH SCROLL ===== -->
+  <script>
+    const lenis = new Lenis()
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+  </script>
+
+</body>
+
+</html>

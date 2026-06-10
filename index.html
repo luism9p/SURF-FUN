@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="h-100" lang="es">
+<html class="scroll-smooth scroll-pt-24" lang="es">
 
 <head>
   <meta charset="utf-8">
@@ -23,367 +23,138 @@
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,600&family=Outfit:wght@300;400;600;800&display=swap"
     rel="stylesheet">
 
-  <style>
-    /* ===== GLOBAL TYPOGRAPHY ===== */
-    *,
-    body {
-      font-family: 'Outfit', sans-serif !important;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    .display-huge,
-    .display-4,
-    .display-5,
-    .fw-lighter,
-    .fw-light,
-    .fw-bolder {
-      font-family: 'Fraunces', serif !important;
-      letter-spacing: -0.02em;
-    }
-
-    h1,
-    .display-huge {
-      font-weight: 700;
-    }
-
-    h2 {
-      font-weight: 600;
-    }
-
-    h3,
-    h4 {
-      font-weight: 600;
-    }
-
-    /* ===== FLOATING PILL NAVBAR ===== */
-    #navScroll {
-      top: 1.25rem !important;
-      left: 50% !important;
-      transform: translateX(-50%) !important;
-      width: 90% !important;
-      max-width: 62rem !important;
-      border-radius: 9999px !important;
-      background: rgba(18, 35, 51, 0.88) !important;
-      backdrop-filter: blur(18px) !important;
-      -webkit-backdrop-filter: blur(18px) !important;
-      border: 1px solid rgba(255, 255, 255, 0.08) !important;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(0, 229, 255, 0.05) !important;
-      padding: 0 !important;
-      transition: box-shadow 0.3s ease, background 0.3s ease;
-    }
-
-    #navScroll.scrolled {
-      background: rgba(7, 19, 29, 0.98) !important;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 229, 255, 0.08) !important;
-    }
-
-    #navScroll .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0.625rem 1.5rem;
-    }
-
-    /* Nav links */
-    #navScroll .pill-nav-links {
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    #navScroll .pill-nav-links a {
-      color: rgba(255, 255, 255, 0.65);
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.01em;
-      padding: 0.4rem 0.9rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      transition: color 0.25s ease, background 0.25s ease;
-    }
-
-    #navScroll .pill-nav-links a:hover {
-      color: #00E5FF;
-      background: rgba(0, 229, 255, 0.07);
-    }
-
-    /* Lang selector */
-    .pill-lang-selector {
-      display: flex;
-      align-items: center;
-      gap: 0.15rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: rgba(255, 255, 255, 0.35);
-    }
-
-    .pill-lang-btn {
-      background: none;
-      border: none;
-      color: rgba(255, 255, 255, 0.4);
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 0.2rem 0.35rem;
-      cursor: pointer;
-      transition: color 0.2s;
-    }
-
-    .pill-lang-btn:hover,
-    .pill-lang-btn.active {
-      color: #00E5FF;
-    }
-
-    .pill-lang-divider {
-      color: rgba(255, 255, 255, 0.15);
-    }
-
-    /* CTA Button */
-    .pill-cta {
-      background: #00E5FF;
-      color: #07131D !important;
-      font-family: 'Outfit', sans-serif;
-      font-weight: 700;
-      font-size: 0.875rem;
-      padding: 0.5rem 1.25rem;
-      border-radius: 9999px;
-      text-decoration: none;
-      letter-spacing: 0.01em;
-      border: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      white-space: nowrap;
-    }
-
-    .pill-cta:hover {
-      transform: scale(1.04);
-      box-shadow: 0 0 22px rgba(0, 229, 255, 0.45);
-      color: #07131D !important;
-    }
-
-    /* Mobile toggle */
-    .pill-mobile-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.25rem;
-      flex-direction: column;
-      gap: 5px;
-    }
-
-    .pill-mobile-toggle span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 2px;
-      transition: background 0.2s;
-    }
-
-    .pill-mobile-toggle:hover span {
-      background: #00E5FF;
-    }
-
-    @media (max-width: 768px) {
-
-      .pill-nav-links,
-      .pill-lang-selector {
-        display: none;
-      }
-
-      .pill-mobile-toggle {
-        display: flex;
-      }
-    }
-
-    /* ===== HERO PADDING ===== */
-    .hero-push-top {
-      padding-top: 9rem !important;
-    }
-
-    /* ===== HERO MARQUEE ANIMATION ===== */
-    @keyframes hero-slide {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-
-    .animate-hero-slide {
-      animation: hero-slide 40s linear infinite;
-      width: max-content;
-      will-change: transform;
-    }
-
-    /* ===== LENIS SMOOTH SCROLL ===== */
-    html.lenis {
-      height: auto;
-    }
-
-    .lenis.lenis-smooth {
-      scroll-behavior: auto;
-    }
-
-    .lenis.lenis-smooth [data-lenis-prevent] {
-      overscroll-behavior: contain;
-    }
-
-    .lenis.lenis-stopped {
-      overflow: hidden;
-    }
-
-    .lenis.lenis-scrolling iframe {
-      pointer-events: none;
-    }
-
-    /* ===== CUSTOM SCROLLBAR (Carrusel) ===== */
-    .custom-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .custom-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-  </style>
 
 
+
+  <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="text-white mt-0" data-bs-spy="scroll" data-bs-target="#navScroll" style="background-color:#07131D;">
+<body class="text-white mt-0 extracted-style-1" data-bs-spy="scroll" data-bs-target="#navScroll">
 
-  <div class="fixed top-0 left-0 w-full h-1 z-[100] bg-transparent pointer-events-none"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 0.25rem; z-index: 100; pointer-events: none;">
-    <div id="scroll-progress" class="h-full bg-[#00E5FF] w-0"
-      style="height: 100%; background-color: #00E5FF; width: 0%;"></div>
+  <div class="fixed top-0 left-0 w-full h-1 z-[100] bg-transparent pointer-events-none extracted-style-2">
+    <div id="scroll-progress" class="h-full bg-[#00E5FF] w-0 extracted-style-3"></div>
   </div>
 
   <!-- ===== FLOATING PILL NAVBAR ===== -->
-  <nav id="navScroll" class="navbar fixed-top" tabindex="0">
-    <div class="nav-inner"
-      style="width: 100%; max-width: 64rem; padding: 0.75rem 1.5rem; margin: 0 auto; display: flex; align-items: center; justify-content: space-between;">
+  <nav id="navScroll" class="fixed">
+    <div class="nav-inner extracted-style-4">
 
-      <!-- LEFT: Logo (shrink-0) -->
-      <div style="flex-shrink: 0; display: flex; align-items: center;">
+      <!-- LOGO -->
+      <div class="extracted-style-5">
         <a href="index.html" aria-label="Surf Fun Experience">
-          <img src="img/webp/surf-fun-logo.webp" alt="Surf Fun Experience Logo"
-            style="height:2.25rem;width:auto;display:block;">
+          <img src="img/webp/surf-fun-logo.webp" alt="Surf Fun Experience Logo" class="extracted-style-6">
         </a>
       </div>
 
-      <!-- CENTER: Nav links (flex-1, center) -->
-      <div class="d-none d-md-flex" style="flex: 1; justify-content: center; align-items: center;">
-        <ul class="pill-nav-links" style="display: flex; gap: 2rem; margin: 0; padding: 0; list-style: none;">
+      <!-- CENTER: Nav links -->
+      <div class="hidden md:flex extracted-style-7">
+        <ul class="pill-nav-links extracted-style-8">
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#precios">Precios</a></li>
           <li><a href="#alquiler">Alquiler</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="catalogo.html" class="hover:text-[#00E5FF] transition-colors">Catálogo</a></li>
         </ul>
       </div>
 
-      <!-- RIGHT: Lang selector + CTA (justify-end, gap-6) -->
-      <div style="display:flex; align-items:center; justify-content:flex-end; gap:1.5rem; flex-shrink:0;">
-        <div class="pill-lang-selector d-none d-lg-flex"
-          style="display:flex; align-items:center; gap:0.5rem; font-size:0.875rem; color:#94A3B8;">
+      <!-- RIGHT: Lang + CTA + Hamburger -->
+      <div class="extracted-style-9">
+
+        <!-- LANGUAGE SELECTOR -->
+        <div class="pill-lang-selector hidden lg:flex">
           <button class="pill-lang-btn active" data-lang="es">ES</button>
           <span class="pill-lang-divider">|</span>
           <button class="pill-lang-btn" data-lang="en">EN</button>
           <span class="pill-lang-divider">|</span>
           <button class="pill-lang-btn" data-lang="pt">PT</button>
         </div>
-        <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
-          rel="noopener noreferrer" class="pill-cta">
-          Reserva tu clase
-        </a>
-        <button class="pill-mobile-toggle d-md-none" aria-label="Abrir menú" style="margin-left: 0.5rem;">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
 
+        <!-- DESKTOP CTA -->
+        <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
+          rel="noopener noreferrer" class="pill-cta hidden md:inline-block">Reserva tu clase</a>
+
+        <!-- HAMBURGER -->
+        <button id="menu-btn"
+          class="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-[6px] focus:outline-none"
+          aria-label="Abrir menú">
+          <span id="line-1" class="w-7 h-[2px] bg-white rounded-full transition-all duration-500 origin-center"></span>
+          <span id="line-2" class="w-7 h-[2px] bg-white rounded-full transition-all duration-500 origin-center"></span>
+          <span id="line-3" class="w-7 h-[2px] bg-white rounded-full transition-all duration-500 origin-center"></span>
+        </button>
+
+      </div>
     </div>
   </nav>
 
+  <!-- MOBILE FULL-SCREEN MENU -->
+  <div id="mobile-menu"
+    class="fixed inset-0 w-screen h-[100dvh] bg-[#07131D]/95 backdrop-blur-2xl z-[110] flex flex-col items-center justify-center gap-10 opacity-0 pointer-events-none transition-opacity duration-500 md:hidden">
+    <button id="close-menu-btn"
+      class="absolute top-8 right-6 text-white hover:text-[#00E5FF] p-2 z-[130] focus:outline-none md:hidden">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <a href="#servicios"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Servicios</a>
+    <a href="#precios"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Precios</a>
+    <a href="#alquiler"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Alquiler</a>
+    <a href="catalogo.html"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Catálogo</a>
+    <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
+      class="mobile-link mt-8 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-500 translate-y-8 opacity-0">Reserva
+      tu clase</a>
+  </div>
+
   <main>
     <!-- ===== HERO SECTION — MARQUEE BACKGROUND ===== -->
-    <div class="position-relative overflow-hidden d-flex align-items-center text-white"
-      style="width: 100%; height: 100vh; background-color: #07131D;">
+    <div class="position-relative overflow-hidden d-flex align-items-center text-white extracted-style-10">
 
       <!-- z-0 | IMAGE TRACK (scrolls left infinitely via CSS animation) -->
-      <div class="animate-hero-slide"
-        style="position: absolute; top: 0; left: 0; bottom: 0; z-index: 0; height: 100%; display: flex;">
+      <div class="animate-hero-slide extracted-style-11">
 
         <!-- Set A -->
-        <img src="img/hero.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf Hero Principal">
-        <img src="img/hero1.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 1">
-        <img src="img/hero2.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 2">
-        <img src="img/hero3.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 3">
-        <img src="img/hero4.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 4">
-        <img src="img/hero5.JPG" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 5">
+        <img src="img/hero.jpg" class="extracted-style-12" alt="Surf Hero Principal">
+        <img src="img/hero1.jpg" class="extracted-style-12" alt="Surf 1">
+        <img src="img/hero2.jpg" class="extracted-style-12" alt="Surf 2">
+        <img src="img/hero3.jpg" class="extracted-style-12" alt="Surf 3">
+        <img src="img/hero4.jpg" class="extracted-style-12" alt="Surf 4">
+        <img src="img/hero5.JPG" class="extracted-style-12" alt="Surf 5">
 
         <!-- Set B — duplicate for seamless infinite loop -->
-        <img src="img/hero.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf Hero Principal">
-        <img src="img/hero1.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 1">
-        <img src="img/hero2.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 2">
-        <img src="img/hero3.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 3">
-        <img src="img/hero4.jpg" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 4">
-        <img src="img/hero5.JPG" style="height:100%; width:60vw; max-width:900px; object-fit:cover; flex-shrink:0;"
-          alt="Surf 5">
+        <img src="img/hero.jpg" class="extracted-style-12" alt="Surf Hero Principal">
+        <img src="img/hero1.jpg" class="extracted-style-12" alt="Surf 1">
+        <img src="img/hero2.jpg" class="extracted-style-12" alt="Surf 2">
+        <img src="img/hero3.jpg" class="extracted-style-12" alt="Surf 3">
+        <img src="img/hero4.jpg" class="extracted-style-12" alt="Surf 4">
+        <img src="img/hero5.JPG" class="extracted-style-12" alt="Surf 5">
       </div>
 
       <!-- z-10 | MOBILE overlay: semi-dark across full width -->
-      <div class="d-lg-none" style="position:absolute; inset:0; z-index:10; background:rgba(7,19,29,0.68);"></div>
+      <div class="d-lg-none extracted-style-13"></div>
 
       <!-- z-11 | DESKTOP gradient: dark left → transparent right -->
-      <div class="d-none d-lg-block" style="position:absolute; inset:0; z-index:11;
-               background: linear-gradient(to right,
-                 #07131D 0%,
-                 rgba(7,19,29,0.92) 30%,
-                 rgba(7,19,29,0.55) 55%,
-                 transparent 100%);"></div>
+      <div class="d-none d-lg-block extracted-style-14"></div>
 
       <!-- z-20 | HERO TEXT — always on top -->
-      <div style="position:relative; z-index:20; width:100%;">
-        <div style="max-width:72rem; margin:0 auto; padding:0 1.5rem 0 2rem;">
-          <div class="col-12 col-lg-6" style="padding-top:2rem; padding-bottom:2rem;">
-            <span
-              style="color:#00E5FF; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; font-size:0.875rem;"
-              class="d-block mb-4">Lobitos, Perú</span>
+      <div class="extracted-style-15">
+        <div class="extracted-style-16">
+          <div class="col-12 col-lg-6 extracted-style-17">
+            <span class="extracted-style-18" class="d-block mb-4">Lobitos, Perú</span>
             <h1 class="display-huge mb-4 lh-1" style="color:#ffffff;">
               VIVE EL SURF
-              <span
-                style="font-weight:400; font-style:italic; color:#00E5FF; font-family:'Fraunces', serif !important;">
+              <span class="extracted-style-19">
                 de forma divertida
               </span>
               Y SEGURA
             </h1>
-            <p style="color:#94A3B8; font-weight:300; font-size:1.125rem; max-width:36rem;" class="mb-5">
+            <p class="extracted-style-20" class="mb-5">
               No necesitas experiencia previa, solo ganas de entrar al mar. Creamos momentos donde conectas contigo, con
               otros y con el mar.
             </p>
             <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20agendar%20una%20clase" target="_blank"
-              rel="noopener noreferrer" class="btn btn-xl d-inline-flex align-items-center"
-              style="background-color:#00E5FF;color:#07131D;font-weight:700;border-radius:9999px;padding:0.75rem 2.5rem;font-size:1.125rem;gap:0.5rem;box-shadow:0 4px 14px rgba(0,229,255,0.4);">
+              rel="noopener noreferrer" class="btn btn-xl d-inline-flex align-items-center extracted-style-21">
               Agenda tu clase
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                 class="bi bi-arrow-right" viewBox="0 0 16 16">
@@ -398,13 +169,13 @@
     </div>
 
 
-    <div style="background-color:#e0edfa;">
+    <div class="extracted-style-22">
       <div class="container px-vw-5 py-vh-5">
         <div class="row d-flex align-items-center">
           <div class="col-12 col-lg-7 text-lg-end" data-aos="fade-right">
             <span class="h5 fw-lighter" style="color:#00E5FF;">¿Por qué nosotros?</span>
             <h2 class="display-4" style="color:#07131D;">Disfruta de un ambiente <span
-                style="font-weight:400; font-style:italic;">divertido y
+                class="extracted-style-23">divertido y
                 relajado</span> con profesores certificados y seguridad en todo momento.</h2>
           </div>
           <div class="col-12 col-lg-5" data-aos="fade-left">
@@ -435,61 +206,49 @@
     </div>
 
     <!-- ===== SECCIÓN SERVICIOS — PANELES STICKY HORIZONTAL ===== -->
-    <section id="servicios-horizontales"
-      style="position: relative; height: 400vh; background-color: #07131D; z-index: 10;">
+    <section id="servicios" class="extracted-style-24">
 
       <!-- VISOR STICKY -->
-      <div
-        style="position: sticky; top: 0; height: 100vh; width: 100%; display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;">
+      <div class="extracted-style-25">
 
         <!-- TÍTULOS FLOTANTES — z-index 30, pointer-events-none -->
-        <div
-          style="position: absolute; top: clamp(6rem, 10vw, 8rem); left: clamp(1.5rem, 3vw, 3rem); z-index: 30; pointer-events: none;">
+        <div class="extracted-style-26">
           <!-- Línea cyan decorativa -->
-          <div style="width: 4rem; height: 4px; background: #00E5FF; margin-bottom: 1rem; border-radius: 2px;"></div>
-          <p
-            style="color: #00E5FF; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 0.5rem; font-family: 'Outfit', sans-serif;">
+          <div class="extracted-style-27"></div>
+          <p class="extracted-style-28">
             Lo que ofrecemos
           </p>
-          <h2
-            style="font-family: 'Fraunces', serif; font-size: clamp(2.5rem, 5.5vw, 4rem); color: #ffffff; margin: 0; line-height: 1.05; letter-spacing: -0.02em;">
-            Nuestros <span style="font-style: italic; color: #00E5FF;">Servicios</span>
+          <h2 class="extracted-style-29">
+            Nuestros <span class="extracted-style-30">Servicios</span>
           </h2>
         </div>
 
         <!-- TRACK: gap-0, width max-content, height 75vh -->
-        <div id="track-servicios"
-          style="display: flex; gap: 0; width: max-content; height: 75vh; will-change: transform; z-index: 10; position: relative; flex-shrink: 0;">
+        <div id="track-servicios" class="extracted-style-31">
 
           <!-- ══ Panel 1: Clases Individuales ══ -->
           <div
             onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20individuales','_blank')"
-            style="position: relative; width: 100vw; height: 100%; flex-shrink: 0; overflow: hidden; cursor: pointer;">
-            <!-- Foto de fondo -->
-            <img src="img/clases-individuales.png" alt="Clases Individuales"
-              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-            <!-- Gradiente: oscuro a la izquierda, transparente a la derecha -->
-            <div style="position: absolute; inset: 0;
-              background: linear-gradient(to right, #07131D 0%, rgba(7,19,29,0.85) 35%, rgba(7,19,29,0.4) 60%, transparent 100%);
-              width: 100%;"></div>
-            <!-- Contenido de texto: centrado verticalmente a la izquierda -->
-            <div
-              style="position: absolute; top: 50%; transform: translateY(-50%); left: clamp(1.5rem, 3vw, 3rem); width: 100%; max-width: 32rem; z-index: 20; padding-right: 1.5rem;">
-              <span
-                style="display: block; font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; color: #00E5FF; line-height: 1; margin-bottom: 0.5rem;">01.</span>
-              <h3
-                style="font-family: 'Fraunces', serif; font-size: clamp(2.25rem, 4vw, 3rem); color: #ffffff; margin: 0 0 1rem; letter-spacing: -0.02em; line-height: 1.1;">
+            class="extracted-style-32">
+            <!-- Foto de fondo — sin filtros, color original -->
+            <img src="img/clases-individuales.png" alt="Clases Individuales" class="extracted-style-33">
+            <!-- Capa 1: fondo sólido izquierda → transparente derecha (texto legible) -->
+            <div class="extracted-style-34"></div>
+            <!-- Capa 2: difuminado de fusión — arranca justo donde el texto termina -->
+            <div class="extracted-style-35"></div>
+            <!-- Contenido de texto -->
+            <div class="extracted-style-36">
+              <span class="extracted-style-37">01.</span>
+              <h3 class="extracted-style-38">
                 Clases Individuales
               </h3>
-              <p
-                style="font-family: 'Outfit', sans-serif; color: #CBD5E1; font-size: 1rem; margin-bottom: 2rem; line-height: 1.7;">
+              <p class="extracted-style-39">
                 Atención personalizada para principiantes, intermedios y avanzados. Aprende desde cero o mejora tu
                 técnica con clases adaptadas a tu nivel.
               </p>
               <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20individuales"
-                target="_blank" rel="noopener"
-                style="display: inline-flex; align-items: center; gap: 0.5rem; color: #00E5FF; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; text-decoration: none; transition: opacity 0.25s ease;"
-                onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                target="_blank" rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                onmouseout="this.style.opacity='1'">
                 Saber más &rarr;
               </a>
             </div>
@@ -498,29 +257,22 @@
           <!-- ══ Panel 2: Clases Grupales ══ -->
           <div
             onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20grupales','_blank')"
-            style="position: relative; width: 100vw; height: 100%; flex-shrink: 0; overflow: hidden; cursor: pointer;">
-            <img src="img/clases-grupales2.png" alt="Clases Grupales"
-              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-            <div style="position: absolute; inset: 0;
-              background: linear-gradient(to right, #07131D 0%, rgba(7,19,29,0.85) 35%, rgba(7,19,29,0.4) 60%, transparent 100%);
-              width: 100%;"></div>
-            <div
-              style="position: absolute; top: 50%; transform: translateY(-50%); left: clamp(1.5rem, 3vw, 3rem); width: 100%; max-width: 32rem; z-index: 20; padding-right: 1.5rem;">
-              <span
-                style="display: block; font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; color: #00E5FF; line-height: 1; margin-bottom: 0.5rem;">02.</span>
-              <h3
-                style="font-family: 'Fraunces', serif; font-size: clamp(2.25rem, 4vw, 3rem); color: #ffffff; margin: 0 0 1rem; letter-spacing: -0.02em; line-height: 1.1;">
+            class="extracted-style-32">
+            <img src="img/clases-grupales2.png" alt="Clases Grupales" class="extracted-style-33">
+            <div class="extracted-style-34"></div>
+            <div class="extracted-style-35"></div>
+            <div class="extracted-style-36">
+              <span class="extracted-style-37">02.</span>
+              <h3 class="extracted-style-38">
                 Clases Grupales
               </h3>
-              <p
-                style="font-family: 'Outfit', sans-serif; color: #CBD5E1; font-size: 1rem; margin-bottom: 2rem; line-height: 1.7;">
+              <p class="extracted-style-39">
                 Sesiones dinámicas donde aprenderás a surfear compartiendo las olas con un grupo increíble. La energía
                 del grupo multiplica el progreso.
               </p>
               <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20grupales" target="_blank"
-                rel="noopener"
-                style="display: inline-flex; align-items: center; gap: 0.5rem; color: #00E5FF; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; text-decoration: none; transition: opacity 0.25s ease;"
-                onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                onmouseout="this.style.opacity='1'">
                 Saber más &rarr;
               </a>
             </div>
@@ -529,29 +281,22 @@
           <!-- ══ Panel 3: Surf Trips ══ -->
           <div
             onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20surf%20trips','_blank')"
-            style="position: relative; width: 100vw; height: 100%; flex-shrink: 0; overflow: hidden; cursor: pointer;">
-            <img src="img/surf-trips1.png" alt="Surf Trips"
-              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-            <div style="position: absolute; inset: 0;
-              background: linear-gradient(to right, #07131D 0%, rgba(7,19,29,0.85) 35%, rgba(7,19,29,0.4) 60%, transparent 100%);
-              width: 100%;"></div>
-            <div
-              style="position: absolute; top: 50%; transform: translateY(-50%); left: clamp(1.5rem, 3vw, 3rem); width: 100%; max-width: 32rem; z-index: 20; padding-right: 1.5rem;">
-              <span
-                style="display: block; font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; color: #00E5FF; line-height: 1; margin-bottom: 0.5rem;">03.</span>
-              <h3
-                style="font-family: 'Fraunces', serif; font-size: clamp(2.25rem, 4vw, 3rem); color: #ffffff; margin: 0 0 1rem; letter-spacing: -0.02em; line-height: 1.1;">
+            class="extracted-style-32">
+            <img src="img/surf-trips1.png" alt="Surf Trips" class="extracted-style-33">
+            <div class="extracted-style-34"></div>
+            <div class="extracted-style-35"></div>
+            <div class="extracted-style-36">
+              <span class="extracted-style-37">03.</span>
+              <h3 class="extracted-style-38">
                 Surf Trips
               </h3>
-              <p
-                style="font-family: 'Outfit', sans-serif; color: #CBD5E1; font-size: 1rem; margin-bottom: 2rem; line-height: 1.7;">
+              <p class="extracted-style-39">
                 Viajes a diferentes playas para descubrir nuevas olas y vivir el surf como una verdadera aventura.
                 Exploramos juntos los mejores spots.
               </p>
               <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20surf%20trips" target="_blank"
-                rel="noopener"
-                style="display: inline-flex; align-items: center; gap: 0.5rem; color: #00E5FF; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; text-decoration: none; transition: opacity 0.25s ease;"
-                onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                onmouseout="this.style.opacity='1'">
                 Saber más &rarr;
               </a>
             </div>
@@ -560,29 +305,22 @@
           <!-- ══ Panel 4: Videoanálisis ══ -->
           <div
             onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20videoanalisis','_blank')"
-            style="position: relative; width: 100vw; height: 100%; flex-shrink: 0; overflow: hidden; cursor: pointer;">
-            <img src="img/2.png" alt="Videoanálisis"
-              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;">
-            <div style="position: absolute; inset: 0;
-              background: linear-gradient(to right, #07131D 0%, rgba(7,19,29,0.85) 35%, rgba(7,19,29,0.4) 60%, transparent 100%);
-              width: 100%;"></div>
-            <div
-              style="position: absolute; top: 50%; transform: translateY(-50%); left: clamp(1.5rem, 3vw, 3rem); width: 100%; max-width: 32rem; z-index: 20; padding-right: 1.5rem;">
-              <span
-                style="display: block; font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; color: #00E5FF; line-height: 1; margin-bottom: 0.5rem;">04.</span>
-              <h3
-                style="font-family: 'Fraunces', serif; font-size: clamp(2.25rem, 4vw, 3rem); color: #ffffff; margin: 0 0 1rem; letter-spacing: -0.02em; line-height: 1.1;">
+            class="extracted-style-32">
+            <img src="img/2.png" alt="Videoanálisis" class="extracted-style-33">
+            <div class="extracted-style-34"></div>
+            <div class="extracted-style-35"></div>
+            <div class="extracted-style-36">
+              <span class="extracted-style-37">04.</span>
+              <h3 class="extracted-style-38">
                 Videoanálisis
               </h3>
-              <p
-                style="font-family: 'Outfit', sans-serif; color: #CBD5E1; font-size: 1rem; margin-bottom: 2rem; line-height: 1.7;">
+              <p class="extracted-style-39">
                 Grabamos tus sesiones y las analizamos contigo para ayudarte a mejorar más rápido. Feedback visual
                 preciso para acelerar tu progreso.
               </p>
               <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20videoanalisis" target="_blank"
-                rel="noopener"
-                style="display: inline-flex; align-items: center; gap: 0.5rem; color: #00E5FF; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.35rem; text-decoration: none; transition: opacity 0.25s ease;"
-                onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'">
+                rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                onmouseout="this.style.opacity='1'">
                 Saber más &rarr;
               </a>
             </div>
@@ -593,11 +331,11 @@
     </section>
 
     <!-- NUEVA SECCIÓN 1: SOBRE NOSOTROS -->
-    <section class="relative py-32 px-6 overflow-hidden shadow-2xl"
-      style="background-color: #07131D; z-index: 50; isolation: isolate;">
+    <section class="relative py-32 px-6 overflow-hidden shadow-2xl extracted-style-41">
       <!-- Resplandor premium aislado -->
-      <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full pointer-events-none opacity-20"
-        style="background-color: #00E5FF; filter: blur(128px); mix-blend-mode: multiply;"></div>
+      <div
+        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full pointer-events-none opacity-20 extracted-style-42">
+      </div>
 
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="mb-20 md:mb-32 max-w-3xl">
@@ -635,10 +373,10 @@
 
 
     <!-- NUEVA SECCIÓN 2: METODOLOGÍA -->
-    <section class="relative py-24 lg:py-32 px-6" style="background-color: #f8fafc; z-index: 50; isolation: isolate;">
-      <div class="max-w-7xl mx-auto relative" style="display: flex; flex-wrap: wrap; gap: 4rem;">
+    <section class="relative py-24 lg:py-32 px-6 extracted-style-43">
+      <div class="max-w-7xl mx-auto relative extracted-style-44">
 
-        <div style="flex: 1 1 300px; position: sticky; top: 8rem; height: max-content;">
+        <div class="extracted-style-45">
           <p class="font-bold tracking-widest text-sm uppercase mb-4" style="color: #00E5FF;">Así es una clase con
             nosotros</p>
           <h2 class="font-serif text-5xl lg:text-6xl leading-tight" style="color: #0f172a;">
@@ -646,55 +384,40 @@
           </h2>
         </div>
 
-        <div style="flex: 2 1 500px; display: flex; flex-direction: column; gap: 2.5rem;">
+        <div class="extracted-style-46">
 
           <!-- Paso 01 -->
-          <div class="group"
-            style="background-color: #ffffff; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 1px solid #f1f5f9; position: relative; overflow: hidden; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='translateY(-0.5rem)'" onmouseout="this.style.transform='translateY(0)'">
-            <span
-              style="position: absolute; right: -1rem; bottom: -2rem; font-size: 8rem; font-weight: 900; color: #f8fafc; opacity: 0.8; pointer-events: none; font-family: 'Outfit', sans-serif;">01</span>
-            <span
-              style="font-weight: 900; font-size: 1.875rem; display: block; margin-bottom: 0.5rem; color: #00E5FF; position: relative; z-index: 10; font-family: 'Outfit', sans-serif;">01.</span>
-            <h3 class="font-serif"
-              style="font-size: 1.875rem; margin-bottom: 1rem; color: #0f172a; position: relative; z-index: 10;">
+          <div class="group extracted-style-47" onmouseover="this.style.transform='translateY(-0.5rem)'"
+            onmouseout="this.style.transform='translateY(0)'">
+            <span class="extracted-style-48">01</span>
+            <span class="extracted-style-49">01.</span>
+            <h3 class="font-serif extracted-style-50">
               Calentamiento (5-10 min)</h3>
-            <p class="font-sans"
-              style="font-size: 1.125rem; color: #475569; line-height: 1.75; position: relative; z-index: 10;">Tiene
+            <p class="font-sans extracted-style-51">Tiene
               como objetivo disminuir el riesgo de lesiones y preparar el cuerpo. Se realiza en la arena con la guía
               directa del instructor.</p>
           </div>
 
           <!-- Paso 02 -->
-          <div class="group"
-            style="background-color: #ffffff; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 1px solid #f1f5f9; position: relative; overflow: hidden; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='translateY(-0.5rem)'" onmouseout="this.style.transform='translateY(0)'">
-            <span
-              style="position: absolute; right: -1rem; bottom: -2rem; font-size: 8rem; font-weight: 900; color: #f8fafc; opacity: 0.8; pointer-events: none; font-family: 'Outfit', sans-serif;">02</span>
-            <span
-              style="font-weight: 900; font-size: 1.875rem; display: block; margin-bottom: 0.5rem; color: #00E5FF; position: relative; z-index: 10; font-family: 'Outfit', sans-serif;">02.</span>
-            <h3 class="font-serif"
-              style="font-size: 1.875rem; margin-bottom: 1rem; color: #0f172a; position: relative; z-index: 10;">Teoría
+          <div class="group extracted-style-47" onmouseover="this.style.transform='translateY(-0.5rem)'"
+            onmouseout="this.style.transform='translateY(0)'">
+            <span class="extracted-style-48">02</span>
+            <span class="extracted-style-49">02.</span>
+            <h3 class="font-serif extracted-style-50">Teoría
               y Técnica</h3>
-            <p class="font-sans"
-              style="font-size: 1.125rem; color: #475569; line-height: 1.75; position: relative; z-index: 10;">Conocemos
+            <p class="font-sans extracted-style-51">Conocemos
               los conceptos clave: pasos para pararse en la tabla, cómo pasar la ola y por dónde entrar al mar. Hacemos
               que sea muy entretenido.</p>
           </div>
 
           <!-- Paso 03 -->
-          <div class="group"
-            style="background-color: #ffffff; padding: 3rem; border-radius: 1.5rem; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); border: 1px solid #f1f5f9; position: relative; overflow: hidden; transition: transform 0.3s ease;"
-            onmouseover="this.style.transform='translateY(-0.5rem)'" onmouseout="this.style.transform='translateY(0)'">
-            <span
-              style="position: absolute; right: -1rem; bottom: -2rem; font-size: 8rem; font-weight: 900; color: #f8fafc; opacity: 0.8; pointer-events: none; font-family: 'Outfit', sans-serif;">03</span>
-            <span
-              style="font-weight: 900; font-size: 1.875rem; display: block; margin-bottom: 0.5rem; color: #00E5FF; position: relative; z-index: 10; font-family: 'Outfit', sans-serif;">03.</span>
-            <h3 class="font-serif"
-              style="font-size: 1.875rem; margin-bottom: 1rem; color: #0f172a; position: relative; z-index: 10;">
+          <div class="group extracted-style-47" onmouseover="this.style.transform='translateY(-0.5rem)'"
+            onmouseout="this.style.transform='translateY(0)'">
+            <span class="extracted-style-48">03</span>
+            <span class="extracted-style-49">03.</span>
+            <h3 class="font-serif extracted-style-50">
               Práctica en el mar</h3>
-            <p class="font-sans"
-              style="font-size: 1.125rem; color: #475569; line-height: 1.75; position: relative; z-index: 10;">La etapa
+            <p class="font-sans extracted-style-51">La etapa
               final y más importante. El instructor te dará todas las facilidades para tomar olas e intentar pararte
               aplicando lo aprendido. ¡Aquí pasamos la mayor parte del tiempo!</p>
           </div>
@@ -703,126 +426,123 @@
       </div>
     </section>
     <!-- SECCIÓN EQUIPAMIENTO -->
-    <section class="relative bg-[#07131D] py-24 lg:py-32 px-6 overflow-hidden">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <!-- Composición de Imágenes 3D -->
-        <div class="relative w-full h-[400px] lg:h-[500px] group">
-          <img src="img/local-tablas-2.jpg"
-            class="absolute top-0 left-0 w-4/5 h-4/5 object-cover rounded-3xl shadow-2xl z-10 transition-transform duration-500 group-hover:-translate-y-2"
-            alt="Tablas de Surf">
-          <img src="img/clases1.jpg"
-            class="absolute bottom-0 right-0 w-3/5 h-3/5 object-cover rounded-3xl shadow-2xl z-20 border-[10px] border-[#07131D] transition-transform duration-500 group-hover:translate-y-2 group-hover:scale-105"
-            alt="Wetsuits y alumnos">
-        </div>
-        <!-- Texto Editorial -->
-        <div class="lg:pl-8">
-          <p class="text-[#00E5FF] font-bold tracking-widest text-sm uppercase mb-4">Equipamiento</p>
-          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-6">Tablas y wetsuits <span
-              class="italic text-[#00E5FF]">listos para usar</span></h2>
-          <p class="font-sans text-slate-300 text-lg mb-8 leading-relaxed">Con recomendaciones personalizadas según tu
-            nivel de experiencia y las condiciones del mar en Lobitos.</p>
-        </div>
-      </div>
-    </section>
+    <section class="relative bg-[#07131D] overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 py-20 md:py-32">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
-    <!-- SECCIÓN ALQUILER (Banner Premium) -->
-    <section class="relative bg-[#07131D] pb-24 px-6">
-      <div
-        class="max-w-7xl mx-auto bg-white/5 border border-white/10 rounded-[2rem] p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-2xl backdrop-blur-sm">
-        <div class="max-w-2xl text-center lg:text-left">
-          <p class="text-[#00E5FF] font-bold tracking-widest text-sm uppercase mb-2">¿Traes tu experiencia?</p>
-          <h3 class="font-serif text-3xl md:text-4xl text-white mb-4">Alquiler de equipos para tu sesión.</h3>
-          <p class="text-slate-400 text-lg">Incluye Surfboard + Wetsuit. También ofrecemos alquileres por semana (S/210)
-            y por mes (S/750).</p>
-        </div>
-        <div class="text-center lg:text-right shrink-0">
-          <p class="text-5xl md:text-6xl font-black text-white mb-4">S/ 40<span
-              class="text-xl text-slate-400 font-normal">/día</span></p>
-          <a href="#contacto"
-            class="inline-block bg-[#00E5FF] text-[#07131D] font-bold py-4 px-8 rounded-full hover:bg-white hover:scale-105 transition-all">Alquilar
-            Equipo</a>
+          <div class="relative w-full max-w-md mx-auto lg:mx-0 lg:max-w-none">
+            <div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl border border-white/5 relative z-0">
+              <img src="img/local-tablas-2.jpg" alt="Tablas de surf" class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-[#07131D]/90 via-transparent to-transparent"></div>
+            </div>
+
+            <div
+              class="absolute -bottom-12 -right-6 md:-right-12 w-2/3 aspect-square rounded-[2rem] overflow-hidden shadow-2xl border-[12px] border-[#07131D] z-10 transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:-translate-x-2">
+              <img src="img/clases1.jpg" alt="Clases en la playa" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-center mt-20 lg:mt-0 lg:pl-8">
+            <span class="text-[#00E5FF] tracking-[0.2em] text-xs font-bold uppercase mb-4 block">
+              Equipamiento
+            </span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight">
+              Tablas y wetsuits <br>
+              <span class="text-[#00E5FF] italic font-light">listos para usar</span>
+            </h2>
+            <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
+              Con recomendaciones personalizadas según tu nivel de experiencia y las condiciones del mar en Lobitos.
+            </p>
+
+            <div>
+              <a href="catalogo.html"
+                class="group inline-flex items-center justify-center bg-[#00E5FF] text-[#07131D] font-bold rounded-full px-8 py-4 transition-all duration-300 hover:bg-white hover:shadow-[0_0_30px_rgba(0,229,255,0.4)] hover:scale-105">
+                Ver catálogo de tablas
+                <svg class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- SECCIÓN PRECIOS -->
-    <section class="relative bg-slate-50 py-24 px-6">
-      <div class="max-w-7xl mx-auto">
+    <section id="precios" class="relative bg-slate-50 py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+
         <div class="text-center mb-16">
           <h2 class="font-serif text-5xl lg:text-6xl text-slate-900">Nuestros <span
               class="italic text-[#00E5FF]">precios</span></h2>
+          <p class="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">Elige el equipo ideal para tu sesión. Tenemos tarifas
+            desde un solo día hasta planes mensuales.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-
-          <!-- Cita Motivacional -->
-          <div
-            class="lg:col-span-1 bg-white p-10 rounded-3xl shadow-sm border border-slate-100 flex flex-col justify-center h-full">
-            <p class="font-serif text-2xl md:text-3xl text-slate-700 italic leading-relaxed mb-6">"Nuestros Surf Plans
-              están diseñados para que mantengas la constancia y veas resultados reales en el agua."</p>
-            <p class="font-bold text-[#00E5FF] tracking-wide text-lg">— Surf Fun Experience</p>
-          </div>
-
-          <!-- Tarjetas de Planes -->
-          <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-
-            <!-- Plan 1 -->
-            <div
-              class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col hover:-translate-y-2 transition-transform duration-300">
-              <h3 class="text-xl font-bold text-slate-900 mb-2">1 Clase</h3>
-              <p class="text-4xl font-black text-[#00E5FF] mb-6">S/ 90</p>
-              <ul class="text-slate-600 mb-8 space-y-4 flex-grow">
-                <li class="flex items-center gap-3"><span class="text-[#00E5FF] font-bold">✓</span> Individual</li>
-                <li class="flex items-center gap-3"><span class="text-[#00E5FF] font-bold">✓</span> 60-75 min</li>
-              </ul>
-              <button
-                class="w-full py-4 bg-slate-100 text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition-colors">Consultar</button>
-            </div>
-
-            <!-- Plan 2 (Destacado) -->
-            <div
-              class="bg-[#07131D] p-8 rounded-3xl shadow-2xl border border-slate-800 flex flex-col hover:-translate-y-2 transition-transform duration-300 md:-mt-4 md:mb-4 relative z-10">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#00E5FF] text-[#07131D] text-xs font-bold px-4 py-1 rounded-full uppercase tracking-widest shadow-md">
-                Más Popular</div>
-              <h3 class="text-xl font-bold text-white mb-2 mt-2">5 Clases</h3>
-              <p class="text-4xl font-black text-[#00E5FF] mb-6">S/ 400</p>
-              <ul class="text-slate-300 mb-8 space-y-4 flex-grow">
-                <li class="flex items-center gap-3"><span class="text-[#00E5FF] font-bold">✓</span> Grupales</li>
-                <li class="flex items-center gap-3"><span class="text-[#00E5FF] font-bold">✓</span> 60-75 min</li>
-              </ul>
-              <button
-                class="w-full py-4 bg-[#00E5FF] text-[#07131D] font-bold rounded-xl hover:bg-white transition-colors">Elegir
-                Plan</button>
-            </div>
-
-            <!-- Plan 3 -->
-            <div
-              class="bg-white p-8 rounded-3xl shadow-lg border border-slate-100 flex flex-col hover:-translate-y-2 transition-transform duration-300">
-              <h3 class="text-xl font-bold text-slate-900 mb-2">10 Clases</h3>
-              <p class="text-4xl font-black text-[#00E5FF] mb-6">S/ 700</p>
-              <ul class="text-slate-600 mb-8 space-y-4 flex-grow">
-                <li class="flex items-center gap-3"><span class="text-[#00E5FF] font-bold">✓</span> Grupales</li>
-                <li class="flex items-center gap-3"><span class="text-[#00E5FF] font-bold">✓</span> 60-75 min</li>
-              </ul>
-              <button
-                class="w-full py-4 bg-slate-100 text-slate-900 font-bold rounded-xl hover:bg-slate-200 transition-colors">Consultar</button>
-            </div>
-
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse whitespace-nowrap min-w-[600px]">
+              <thead>
+                <tr class="bg-[#07131D] text-[#00E5FF]">
+                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Tiempo</th>
+                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Surfboard + Wetsuit</th>
+                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Solo Surfboard</th>
+                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Solo Wetsuit</th>
+                </tr>
+              </thead>
+              <tbody class="text-slate-800 divide-y divide-gray-200">
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-5 px-6">
+                    <span class="font-bold text-slate-900">Solo para estudiantes</span>
+                    <span class="text-xs text-slate-500 font-normal block mt-1">(x 1 día)</span>
+                  </td>
+                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 30</td>
+                  <td class="py-5 px-6 font-medium">S/ 25</td>
+                  <td class="py-5 px-6 font-medium">S/ 15</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-5 px-6 font-bold text-slate-900">Por día</td>
+                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 40</td>
+                  <td class="py-5 px-6 font-medium">S/ 30</td>
+                  <td class="py-5 px-6 font-medium">S/ 20</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-5 px-6 font-bold text-slate-900">Por semana</td>
+                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 210</td>
+                  <td class="py-5 px-6 font-medium">S/ 175</td>
+                  <td class="py-5 px-6 font-medium">S/ 105</td>
+                </tr>
+                <tr class="hover:bg-slate-50 transition-colors">
+                  <td class="py-5 px-6 font-bold text-slate-900">Por mes</td>
+                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 750</td>
+                  <td class="py-5 px-6 font-medium">S/ 600</td>
+                  <td class="py-5 px-6 font-medium">S/ 300</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
 
-        <!-- Etiqueta de Medios de Pago -->
-        <div class="mt-12 text-center">
-          <p
-            class="inline-flex items-center gap-2 px-6 py-2 bg-slate-200/50 rounded-full text-slate-600 text-sm font-medium">
-            💳 Aceptamos transferencias vía Yape y Plin
-          </p>
+        <div class="mt-14 text-center">
+          <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20consultar%20por%20alquiler%20de%20equipos"
+            target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-[#00E5FF] text-[#07131D] font-bold py-4 px-12 rounded-full text-lg hover:scale-105 hover:bg-white transition-all shadow-[0_4px_20px_rgba(0,229,255,0.35)]">
+            Consultar Alquiler
+          </a>
+          <div class="mt-8">
+            <p
+              class="inline-flex items-center gap-2 px-6 py-2 bg-slate-200/50 rounded-full text-slate-600 text-sm font-medium">
+              💳 Aceptamos transferencias vía Yape y Plin
+            </p>
+          </div>
         </div>
 
       </div>
     </section>
-    <div style="background-color:#0B1E2D;padding-top:3rem;padding-bottom:3rem;display:none;">
+    <div class="extracted-style-52">
       <div class="container px-vw-5">
         <div class="row d-flex gx-5 align-items-center">
           <div class="col-12 col-lg-6">
@@ -989,152 +709,48 @@
 
   </main>
 
-  <style>
-    .footer-cta-title {
-      font-family: 'Fraunces', serif !important;
-      font-size: 2.25rem;
-      color: #ffffff;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      font-weight: 600;
-      padding: 0 1rem;
-    }
 
-    @media (min-width: 768px) {
-      .footer-cta-title {
-        font-size: 3rem;
-      }
-    }
-
-    .footer-cta-title span {
-      font-style: italic;
-      color: #00E5FF;
-      font-weight: 400;
-    }
-
-    .footer-pill-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      max-width: 48rem;
-      margin: 0 auto 4rem auto;
-      padding: 0 1rem;
-    }
-
-    .footer-pill {
-      padding: 0.625rem 1.5rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.05);
-      color: #cbd5e1;
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.875rem;
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      transition: all 0.3s ease-in-out;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .footer-pill:hover {
-      background: #00E5FF;
-      border-color: #00E5FF;
-      color: #07131D;
-      box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
-    }
-
-    .footer-pill-highlight {
-      border-color: rgba(0, 229, 255, 0.5);
-      color: #00E5FF;
-    }
-  </style>
 
   <!-- SECCIÓN UBICACIÓN (REDISEÑO EDITORIAL) -->
-  <section class="relative py-24 lg:py-32 position-relative"
-    style="padding-top: 6rem; padding-bottom: 8rem; overflow: hidden; background-color: #07131D;">
+  <section class="relative py-24 lg:py-32 position-relative extracted-style-53">
 
     <!-- Imagen de Fondo con Overlay -->
-    <div class="absolute inset-0 z-0" style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 0;">
-      <img src="img/local-living.jpg" class="w-full h-full object-cover opacity-20" alt="Fondo Lobitos"
-        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.2;">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#07131D] via-[#07131D]/95 to-[#07131D]/80"
-        style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(to right, #07131D 0%, rgba(7,19,29,0.95) 50%, rgba(7,19,29,0.8) 100%);">
+    <div class="absolute inset-0 z-0 extracted-style-54">
+      <img src="img/local-living.jpg" class="w-full h-full object-cover opacity-20 extracted-style-55"
+        alt="Fondo Lobitos">
+      <div class="absolute inset-0 bg-gradient-to-r from-[#07131D] via-[#07131D]/95 to-[#07131D]/80 extracted-style-56">
       </div>
     </div>
 
     <!-- Contenido -->
-    <div class="relative z-10 max-w-7xl mx-auto px-6 container"
-      style="position: relative; z-index: 10; max-width: 80rem; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem;">
+    <div class="relative z-10 max-w-7xl mx-auto px-6 container extracted-style-57">
       <div class="row align-items-center g-5">
 
         <!-- Columna Izquierda (Info) -->
         <div class="col-12 col-lg-6" data-aos="fade-right">
-          <div class="text-[#00E5FF] text-xs font-bold tracking-[0.2em] uppercase mb-4"
-            style="color: #00E5FF; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1rem;">
+          <div class="text-[#00E5FF] text-xs font-bold tracking-[0.2em] uppercase mb-4 extracted-style-58">
             LA UBICACIÓN</div>
-          <h2 class="font-serif text-6xl md:text-7xl text-white mb-6 leading-tight"
-            style="font-family: 'Fraunces', serif !important; font-size: 4.5rem; color: #ffffff; margin-bottom: 1.5rem; line-height: 1.1;">
+          <h2 class="font-serif text-6xl md:text-7xl text-white mb-6 leading-tight extracted-style-59">
             Nuestro Spot.</h2>
-          <p class="font-sans text-slate-300 text-lg max-w-md mb-10"
-            style="font-family: 'Outfit', sans-serif !important; color: #CBD5E1; font-size: 1.125rem; max-width: 28rem; margin-bottom: 2.5rem; line-height: 1.75;">
+          <p class="font-sans text-slate-300 text-lg max-w-md mb-10 extracted-style-60">
             Ubicados directamente en la playa de Lobitos, donde las olas son perfectas para cada nivel de surfista.
           </p>
 
-          <div style="margin-bottom: 1.5rem;">
-            <div class="text-slate-500 text-xs tracking-wider mb-1"
-              style="color: #64748B; font-size: 0.75rem; letter-spacing: 0.05em; margin-bottom: 0.25rem;">UBICACIÓN
+          <div class="extracted-style-61">
+            <div class="text-slate-500 text-xs tracking-wider mb-1 extracted-style-62">UBICACIÓN
             </div>
-            <div class="text-white text-lg" style="color: #ffffff; font-size: 1.125rem;">Lobitos Beach, Perú</div>
+            <div class="text-white text-lg extracted-style-63">Lobitos Beach, Perú</div>
           </div>
 
           <div>
-            <div class="text-slate-500 text-xs tracking-wider mb-1"
-              style="color: #64748B; font-size: 0.75rem; letter-spacing: 0.05em; margin-bottom: 0.25rem;">HORARIO</div>
-            <div class="text-white text-lg" style="color: #ffffff; font-size: 1.125rem;">6:30 AM – 6:30 PM</div>
+            <div class="text-slate-500 text-xs tracking-wider mb-1 extracted-style-62">HORARIO</div>
+            <div class="text-white text-lg extracted-style-63">6:30 AM – 6:30 PM</div>
           </div>
         </div>
 
         <!-- Columna Derecha (Mapa) -->
         <div class="col-12 col-lg-6" data-aos="fade-left">
-          <style>
-            .map-editorial-container {
-              width: 100%;
-              aspect-ratio: 1 / 1;
-              border-radius: 1.5rem;
-              overflow: hidden;
-              position: relative;
-              box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-              border: 1px solid rgba(255, 255, 255, 0.05);
-              transform: translateY(0);
-              transition: transform 500ms ease-in-out;
-            }
 
-            @media (min-width: 768px) {
-              .map-editorial-container {
-                aspect-ratio: 4 / 3;
-              }
-            }
-
-            .map-editorial-container:hover {
-              transform: translateY(-8px);
-            }
-
-            .map-editorial-iframe {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              filter: grayscale(100%);
-              opacity: 0.8;
-              transition: all 700ms ease-in-out;
-              cursor: pointer;
-            }
-
-            .map-editorial-iframe:hover {
-              filter: grayscale(0%);
-              opacity: 1;
-            }
-          </style>
 
           <div
             class="map-editorial-container w-full aspect-square md:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-white/5 relative transform hover:-translate-y-2 transition-transform duration-500">
@@ -1149,8 +765,7 @@
     </div>
   </section>
 
-  <footer class="position-relative overflow-hidden"
-    style="background-color:#07131D; padding-top: 6rem; padding-bottom: 2rem;">
+  <footer class="position-relative overflow-hidden extracted-style-64">
     <!-- Titular Llamativo (CTA) -->
     <h2 class="footer-cta-title">
       ¿Listo para correr las <span>mejores olas</span> en Lobitos?
@@ -1170,14 +785,14 @@
     </div>
 
     <!-- El Logotipo Gigante -->
-    <div class="w-100 px-4 mx-auto" style="max-width: 80rem; margin-bottom: 3rem;">
-      <img src="img/surf-fun-footer.png" alt="Surf Fun Experience" class="w-100 h-auto pe-none user-select-none"
-        style="object-fit: contain;">
+    <div class="w-100 px-4 mx-auto extracted-style-65">
+      <img src="img/surf-fun-footer.png" alt="Surf Fun Experience"
+        class="w-100 h-auto pe-none user-select-none extracted-style-66">
     </div>
 
     <!-- Barra Inferior (Copyright) -->
-    <div class="w-100 mx-auto px-4 d-flex flex-column flex-md-row justify-content-between align-items-center"
-      style="max-width: 80rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; color: #64748b; font-size: 0.875rem; font-family: 'Outfit', sans-serif;">
+    <div
+      class="w-100 mx-auto px-4 d-flex flex-column flex-md-row justify-content-between align-items-center extracted-style-67">
       <span>Copyright &copy; 2026 Surf Fun Experience</span>
       <span class="mt-2 mt-md-0">Hecho en Lobitos</span>
     </div>
@@ -1194,21 +809,73 @@
     });
   </script>
   <script>
-    let scrollpos = window.scrollY
-    const header = document.querySelector(".navbar")
-    const header_height = header.offsetHeight
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');
+      const closeMenuBtn = document.getElementById('close-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+      const line1 = document.getElementById('line-1');
+      const line2 = document.getElementById('line-2');
+      const line3 = document.getElementById('line-3');
 
-    const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-    const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+      let isOpen = false;
 
-    window.addEventListener('scroll', function () {
-      scrollpos = window.scrollY;
+      function toggleMenu() {
+        isOpen = !isOpen;
 
-      if (scrollpos >= header_height) { add_class_on_scroll() }
-      else { remove_class_on_scroll() }
+        // Animación de hamburguesa a "X"
+        if (isOpen) {
+          line1.classList.add('rotate-45', 'translate-y-[8px]');
+          line2.classList.add('opacity-0', 'translate-x-4');
+          line3.classList.add('-rotate-45', '-translate-y-[8px]');
 
-      console.log(scrollpos)
-    })
+          mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = 'hidden';
+
+          // Animación escalonada enlaces
+          mobileLinks.forEach((link, index) => {
+            setTimeout(() => {
+              link.classList.remove('translate-y-8', 'opacity-0');
+            }, 100 * (index + 1));
+          });
+        } else {
+          line1.classList.remove('rotate-45', 'translate-y-[8px]');
+          line2.classList.remove('opacity-0', 'translate-x-4');
+          line3.classList.remove('-rotate-45', '-translate-y-[8px]');
+
+          mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+          mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+          document.body.style.overflow = '';
+
+          mobileLinks.forEach(link => {
+            link.classList.add('translate-y-8', 'opacity-0');
+          });
+        }
+      }
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', toggleMenu);
+        if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (isOpen) toggleMenu();
+          });
+        });
+      }
+
+      // Scroll: añade clase .scrolled al nav para intensificar el fondo
+      const nav = document.getElementById('navScroll');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > nav.offsetHeight) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+      }
+    });
   </script>
 
   <script>
@@ -1252,7 +919,7 @@
     // =============================================
     // STICKY HORIZONTAL SCROLL – SERVICIOS
     // =============================================
-    const scrollSection = document.getElementById('servicios-horizontales');
+    const scrollSection = document.getElementById('servicios');
     const track = document.getElementById('track-servicios');
 
     function updateHorizontalScroll() {
@@ -1278,6 +945,39 @@
     window.addEventListener('scroll', updateHorizontalScroll);
     // Also fire on every Lenis tick so smooth-scroll stays in sync
     lenis.on('scroll', updateHorizontalScroll);
+
+    // =============================================
+    // FALLBACK SMOOTH SCROLL NATIVO (Vanilla JS)
+    // =============================================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          e.preventDefault(); // Prevenimos el salto brusco
+
+          const navBar = document.getElementById('navScroll');
+          const navHeight = navBar ? navBar.offsetHeight : 0;
+
+          // Si Lenis está activo, delegamos en él
+          if (typeof lenis !== 'undefined') {
+            lenis.scrollTo(targetElement, { offset: -navHeight });
+          } else {
+            // Fallback nativo
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.scrollY - navHeight;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
   </script>
 </body>
 
