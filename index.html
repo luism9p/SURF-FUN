@@ -50,7 +50,7 @@
       <div class="hidden md:flex extracted-style-7">
         <ul class="pill-nav-links extracted-style-8">
           <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#alquiler">Alquiler</a></li>
+          <li><a href="#metodologia">Metodología</a></li>
           <li><a href="#precios">Precios</a></li>
           <li><a href="catalogo.html" class="hover:text-[#00E5FF] transition-colors">Catálogo</a></li>
         </ul>
@@ -96,10 +96,10 @@
     </button>
     <a href="#servicios"
       class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Servicios</a>
+    <a href="#metodologia"
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Metodología</a>
     <a href="#precios"
       class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Precios</a>
-    <a href="#alquiler"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Alquiler</a>
     <a href="catalogo.html"
       class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Catálogo</a>
     <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
@@ -373,7 +373,7 @@
 
 
     <!-- NUEVA SECCIÓN 2: METODOLOGÍA -->
-    <section class="relative py-24 lg:py-32 px-6 extracted-style-43">
+    <section id="metodologia" class="relative py-24 lg:py-32 px-6 extracted-style-43">
       <div class="max-w-7xl mx-auto relative extracted-style-44">
 
         <div class="extracted-style-45">
@@ -425,8 +425,8 @@
         </div>
       </div>
     </section>
-    <!-- SECCIÓN EQUIPAMIENTO -->
-    <section class="relative bg-[#07131D] overflow-hidden">
+    <!-- SECCIÓN EQUIPAMIENTO Y PRECIOS -->
+    <section id="precios" class="relative bg-[#07131D] overflow-hidden">
       <div class="max-w-7xl mx-auto px-6 py-20 md:py-32">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
 
@@ -444,14 +444,14 @@
 
           <div class="flex flex-col justify-center mt-20 lg:mt-0 lg:pl-8">
             <span class="text-[#00E5FF] tracking-[0.2em] text-xs font-bold uppercase mb-4 block">
-              Equipamiento
+              Equipamiento & Tarifas
             </span>
             <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-6 leading-tight">
               Tablas y wetsuits <br>
               <span class="text-[#00E5FF] italic font-light">listos para usar</span>
             </h2>
             <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-10 max-w-lg">
-              Con recomendaciones personalizadas según tu nivel de experiencia y las condiciones del mar en Lobitos.
+              Con recomendaciones personalizadas según tu nivel de experiencia y las condiciones del mar en Lobitos. Elige el equipo ideal para tu sesión.
             </p>
 
             <div>
@@ -468,73 +468,60 @@
           </div>
 
         </div>
-      </div>
-    </section>
 
-    <!-- SECCIÓN PRECIOS -->
-    <section id="precios" class="relative bg-slate-50 py-24 px-6">
-      <div class="max-w-5xl mx-auto">
-
-        <div class="text-center mb-16">
-          <h2 class="font-serif text-5xl lg:text-6xl text-slate-900">Nuestros <span
-              class="italic text-[#00E5FF]">precios</span></h2>
-          <p class="text-slate-600 text-lg mt-4 max-w-2xl mx-auto">Elige el equipo ideal para tu sesión. Tenemos tarifas
-            desde un solo día hasta planes mensuales.</p>
-        </div>
-
-        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-200">
-          <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse whitespace-nowrap min-w-[600px]">
-              <thead>
-                <tr class="bg-[#07131D] text-[#00E5FF]">
-                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Tiempo</th>
-                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Surfboard + Wetsuit</th>
-                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Solo Surfboard</th>
-                  <th class="py-5 px-6 font-bold text-lg border-b border-[#07131D]">Solo Wetsuit</th>
-                </tr>
-              </thead>
-              <tbody class="text-slate-800 divide-y divide-gray-200">
-                <tr class="hover:bg-slate-50 transition-colors">
-                  <td class="py-5 px-6">
-                    <span class="font-bold text-slate-900">Solo para estudiantes</span>
-                    <span class="text-xs text-slate-500 font-normal block mt-1">(x 1 día)</span>
-                  </td>
-                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 30</td>
-                  <td class="py-5 px-6 font-medium">S/ 25</td>
-                  <td class="py-5 px-6 font-medium">S/ 15</td>
-                </tr>
-                <tr class="hover:bg-slate-50 transition-colors">
-                  <td class="py-5 px-6 font-bold text-slate-900">Por día</td>
-                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 40</td>
-                  <td class="py-5 px-6 font-medium">S/ 30</td>
-                  <td class="py-5 px-6 font-medium">S/ 20</td>
-                </tr>
-                <tr class="hover:bg-slate-50 transition-colors">
-                  <td class="py-5 px-6 font-bold text-slate-900">Por semana</td>
-                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 210</td>
-                  <td class="py-5 px-6 font-medium">S/ 175</td>
-                  <td class="py-5 px-6 font-medium">S/ 105</td>
-                </tr>
-                <tr class="hover:bg-slate-50 transition-colors">
-                  <td class="py-5 px-6 font-bold text-slate-900">Por mes</td>
-                  <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 750</td>
-                  <td class="py-5 px-6 font-medium">S/ 600</td>
-                  <td class="py-5 px-6 font-medium">S/ 300</td>
-                </tr>
-              </tbody>
-            </table>
+        <!-- Tabla de Precios -->
+        <div class="mt-24 max-w-5xl mx-auto">
+          <div class="bg-white/5 backdrop-blur-md rounded-3xl shadow-2xl overflow-hidden border border-white/10">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left border-collapse whitespace-nowrap min-w-[600px]">
+                <thead>
+                  <tr class="bg-black/20 text-[#00E5FF]">
+                    <th class="py-5 px-6 font-bold text-lg border-b border-white/10">Tiempo</th>
+                    <th class="py-5 px-6 font-bold text-lg border-b border-white/10">Surfboard + Wetsuit</th>
+                    <th class="py-5 px-6 font-bold text-lg border-b border-white/10">Solo Surfboard</th>
+                    <th class="py-5 px-6 font-bold text-lg border-b border-white/10">Solo Wetsuit</th>
+                  </tr>
+                </thead>
+                <tbody class="text-white divide-y divide-white/10">
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="py-5 px-6">
+                      <span class="font-bold">Solo para estudiantes</span>
+                      <span class="text-xs text-gray-400 font-normal block mt-1">(x 1 día)</span>
+                    </td>
+                    <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 30</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 25</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 15</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="py-5 px-6 font-bold">Por día</td>
+                    <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 40</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 30</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 20</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="py-5 px-6 font-bold">Por semana</td>
+                    <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 210</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 175</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 105</td>
+                  </tr>
+                  <tr class="hover:bg-white/5 transition-colors">
+                    <td class="py-5 px-6 font-bold">Por mes</td>
+                    <td class="py-5 px-6 font-black text-xl text-[#00E5FF] drop-shadow-sm">S/ 750</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 600</td>
+                    <td class="py-5 px-6 font-medium text-gray-300">S/ 300</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-        </div>
-
-        <div class="mt-14 text-center">
-          <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20consultar%20por%20alquiler%20de%20equipos"
-            target="_blank" rel="noopener noreferrer"
-            class="inline-block bg-[#00E5FF] text-[#07131D] font-bold py-4 px-12 rounded-full text-lg hover:scale-105 hover:bg-white transition-all shadow-[0_4px_20px_rgba(0,229,255,0.35)]">
-            Consultar Alquiler
-          </a>
-          <div class="mt-8">
-            <p
-              class="inline-flex items-center gap-2 px-6 py-2 bg-slate-200/50 rounded-full text-slate-600 text-sm font-medium">
+          
+          <div class="mt-14 flex flex-col sm:flex-row items-center justify-center gap-6">
+            <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20consultar%20por%20alquiler%20de%20equipos"
+              target="_blank" rel="noopener noreferrer"
+              class="inline-block bg-transparent border-2 border-[#00E5FF] text-[#00E5FF] font-bold py-3.5 px-10 rounded-full text-lg hover:bg-[#00E5FF] hover:text-[#07131D] transition-all shadow-[0_4px_20px_rgba(0,229,255,0.15)] hover:shadow-[0_4px_20px_rgba(0,229,255,0.4)]">
+              Consultar Alquiler
+            </a>
+            <p class="inline-flex items-center gap-2 px-6 py-3.5 bg-white/5 border border-white/10 rounded-full text-gray-300 text-sm font-medium">
               💳 Aceptamos transferencias vía Yape y Plin
             </p>
           </div>
@@ -774,8 +761,9 @@
     <!-- Enlaces y Redes Sociales (Pill-shaped Button Cluster) -->
     <div class="footer-pill-container">
       <a href="#servicios" class="footer-pill">Servicios</a>
+      <a href="#metodologia" class="footer-pill">Metodología</a>
       <a href="#precios" class="footer-pill">Precios</a>
-      <a href="#alquiler" class="footer-pill">Alquiler</a>
+      <a href="catalogo.html" class="footer-pill">Catálogo</a>
       <a href="#" class="footer-pill">Términos</a>
       <a href="#" class="footer-pill">Privacidad</a>
       <a href="https://wa.me/51991372918" target="_blank" rel="noopener noreferrer"
