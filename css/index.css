@@ -180,7 +180,7 @@ html.lenis { height: auto; }
 .extracted-style-33 { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
 .extracted-style-34 { position: absolute; inset: 0; z-index: 10; background: linear-gradient(to right, #07131D 0%, #07131D 30%, rgba(7,19,29,0.75) 50%, transparent 72%); }
 .extracted-style-35 { position: absolute; inset: 0; z-index: 11; pointer-events: none; background: linear-gradient(to right, transparent 28%, rgba(7,19,29,0.18) 40%, transparent 55%) }
-.extracted-style-36 { position: absolute; top: 50%; transform: translateY(-50%); left: clamp(1.5rem, 3vw, 3rem); width: 100%; max-width: 32rem; z-index: 20; padding-right: 1.5rem; }
+.extracted-style-36 { position: relative; width: 100%; max-width: 32rem; z-index: 20; }
 .extracted-style-37 { display: block; font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 900; color: #00E5FF; line-height: 1; margin-bottom: 0.5rem; }
 .extracted-style-38 { font-family: 'Fraunces', serif; font-size: clamp(2.25rem, 4vw, 3rem); color: #ffffff; margin: 0 0 1rem; letter-spacing: -0.02em; line-height: 1.1; }
 .extracted-style-39 { font-family: 'Outfit', sans-serif; color: #CBD5E1; font-size: 1rem; margin-bottom: 2rem; line-height: 1.7; }
