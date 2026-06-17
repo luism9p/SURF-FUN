@@ -43,10 +43,10 @@
       <!-- CENTER: Nav links -->
       <div class="hidden md:flex extracted-style-7">
         <ul class="pill-nav-links extracted-style-8">
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="index.html#metodologia">Metodología</a></li>
-          <li><a href="index.html#precios">Precios</a></li>
-          <li><a href="#">Catálogo</a></li>
+          <li><a href="index.html#servicios" data-i18n="nav_services">Servicios</a></li>
+          <li><a href="index.html#metodologia" data-i18n="nav_methodology">Metodología</a></li>
+          <li><a href="index.html#precios" data-i18n="nav_pricing">Precios</a></li>
+          <li><a href="#" data-i18n="nav_catalog">Catálogo</a></li>
         </ul>
       </div>
 
@@ -64,7 +64,7 @@
 
         <!-- DESKTOP CTA -->
         <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
-          rel="noopener noreferrer" class="pill-cta hidden md:inline-block">Reserva tu clase</a>
+          rel="noopener noreferrer" class="pill-cta hidden md:inline-block" data-i18n="nav_book">Reserva tu clase</a>
 
         <!-- HAMBURGER -->
         <button id="menu-btn"
@@ -89,16 +89,23 @@
       </svg>
     </button>
     <a href="index.html#servicios"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Servicios</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_services">Servicios</a>
     <a href="index.html#metodologia"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Metodología</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_methodology">Metodología</a>
     <a href="index.html#precios"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Precios</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_pricing">Precios</a>
     <a href="#"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0">Catálogo</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_catalog">Catálogo</a>
+    <!-- Selector de Idioma Móvil -->
+    <div class="flex items-center justify-center space-x-6 text-lg mt-8 mb-6 w-full">
+      <button data-lang="es" class="pill-lang-btn text-[#00E5FF] font-bold hover:text-white transition-colors">ES</button>
+      <span class="text-gray-600">|</span>
+      <button data-lang="en" class="pill-lang-btn text-gray-400 hover:text-white transition-colors">EN</button>
+      <span class="text-gray-600">|</span>
+      <button data-lang="pt" class="pill-lang-btn text-gray-400 hover:text-white transition-colors">PT</button>
+    </div>
     <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
-      class="mobile-link mt-8 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-500 translate-y-8 opacity-0">Reserva
-      tu clase</a>
+      class="mobile-link mt-8 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_book">Reserva tu clase</a>
   </div>
 
   <main>
@@ -112,10 +119,10 @@
       </div>
 
       <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <p class="text-[#00E5FF] font-bold tracking-[0.2em] text-sm md:text-base mb-4 uppercase">NUESTRO QUIVER</p>
-        <h1 class="text-5xl md:text-7xl font-serif text-white mb-6">Encuentra tu <span
+        <p class="text-[#00E5FF] font-bold tracking-[0.2em] text-sm md:text-base mb-4 uppercase" data-i18n="cat_hero_label">NUESTRO QUIVER</p>
+        <h1 class="text-5xl md:text-7xl font-serif text-white mb-6" data-i18n="cat_hero_title">Encuentra tu <span
             class="text-[#00E5FF] italic">tabla</span></h1>
-        <p class="text-lg text-slate-300 max-w-2xl mx-auto">Tablas de surf para todos los niveles y condiciones. Explora
+        <p class="text-lg text-slate-300 max-w-2xl mx-auto" data-i18n="cat_hero_desc">Tablas de surf para todos los niveles y condiciones. Explora
           nuestro catálogo y reserva tu equipo para correr en Lobitos.</p>
       </div>
     </div>
@@ -131,9 +138,9 @@
             </svg>
           </div>
           <div>
-            <h3 class="text-white font-bold text-lg mb-1 extracted-style-8">
+            <h3 class="text-white font-bold text-lg mb-1 extracted-style-8" data-i18n="cat_policy_title">
               Políticas de Alquiler de Tablas</h3>
-            <p class="text-slate-400 text-sm">Antes de elegir tu tabla, ten en cuenta las siguientes condiciones:</p>
+            <p class="text-slate-400 text-sm" data-i18n="cat_policy_sub">Antes de elegir tu tabla, ten en cuenta las siguientes condiciones:</p>
           </div>
         </div>
         <ul class="space-y-3 text-slate-300 text-sm md:text-base">
@@ -163,25 +170,25 @@
       <div class="max-w-7xl mx-auto px-6 pt-8 pb-4">
         <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-2">
           <div>
-            <p class="text-blue-600 text-xs font-bold tracking-[0.2em] uppercase mb-3">Nuestro Quiver</p>
-            <h2 class="font-serif text-4xl md:text-5xl text-slate-900 leading-tight">
+            <p class="text-blue-600 text-xs font-bold tracking-[0.2em] uppercase mb-3" data-i18n="cat_section_label">Nuestro Quiver</p>
+            <h2 class="font-serif text-4xl md:text-5xl text-slate-900 leading-tight" data-i18n="cat_section_title">
               Encuentra tu <span class="italic text-blue-600">tabla</span>
             </h2>
           </div>
-          <p class="text-slate-600 text-sm">27 tablas · Ordenadas por volumen</p>
+          <p class="text-slate-600 text-sm" data-i18n="cat_count">27 tablas · Ordenadas por volumen</p>
         </div>
         <div class="w-16 h-1 bg-blue-600 rounded-full mt-4 mb-8"></div>
       </div>
 
       <div class="max-w-7xl mx-auto px-6 mt-12 mb-8 flex flex-wrap justify-center gap-4">
         <button onclick="filterBoards('todos')"
-          class="filter-btn active px-6 py-2 rounded-full border border-[#00E5FF] bg-[#00E5FF] text-[#07131D] font-bold transition-all shadow-sm">Todos</button>
+          class="filter-btn active px-6 py-2 rounded-full border border-[#00E5FF] bg-[#00E5FF] text-[#07131D] font-bold transition-all shadow-sm" data-i18n="cat_filter_all">Todos</button>
         <button onclick="filterBoards('shortboard')"
-          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm">Shortboards</button>
+          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm" data-i18n="cat_filter_short">Shortboards</button>
         <button onclick="filterBoards('funboard')"
-          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm">Funboards</button>
+          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm" data-i18n="cat_filter_fun">Funboards</button>
         <button onclick="filterBoards('longboard')"
-          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm">Longboards</button>
+          class="filter-btn px-6 py-2 rounded-full border border-slate-300 bg-white text-slate-600 hover:border-[#00E5FF] hover:text-blue-600 transition-all shadow-sm" data-i18n="cat_filter_long">Longboards</button>
       </div>
 
       <div id="catalog-grid"
@@ -192,9 +199,9 @@
     <!-- ===== CTA FINAL ===== -->
     <section class="py-20 px-6">
       <div class="max-w-4xl mx-auto text-center">
-        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6">¿Listo para <span
+        <h2 class="font-serif text-4xl md:text-5xl text-white mb-6" data-i18n="cat_cta_title">¿Listo para <span
             class="italic text-[#00E5FF]">surfear</span>?</h2>
-        <p class="text-slate-300 text-lg mb-10 max-w-xl mx-auto">Contáctanos por WhatsApp para reservar tu tabla o
+        <p class="text-slate-300 text-lg mb-10 max-w-xl mx-auto" data-i18n="cat_cta_desc">Contáctanos por WhatsApp para reservar tu tabla o
           agendar una clase. ¡Te esperamos en Lobitos!</p>
         <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20alquilar%20una%20tabla" target="_blank"
           rel="noopener noreferrer"
@@ -203,7 +210,7 @@
             <path
               d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.325-.336-.445-.342-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
           </svg>
-          Alquilar por WhatsApp
+          <span data-i18n="cat_cta_btn">Alquilar por WhatsApp</span>
         </a>
       </div>
     </section>
@@ -216,10 +223,10 @@
 
     <!-- Enlaces y Redes Sociales (Pill-shaped Button Cluster) -->
     <div class="footer-pill-container">
-      <a href="index.html#servicios" class="footer-pill">Servicios</a>
-      <a href="index.html#metodologia" class="footer-pill">Metodología</a>
-      <a href="index.html#precios" class="footer-pill">Precios</a>
-      <a href="#" class="footer-pill">Catálogo</a>
+      <a href="index.html#servicios" class="footer-pill" data-i18n="footer_services">Servicios</a>
+      <a href="index.html#metodologia" class="footer-pill" data-i18n="footer_method">Metodología</a>
+      <a href="index.html#precios" class="footer-pill" data-i18n="footer_pricing">Precios</a>
+      <a href="#" class="footer-pill" data-i18n="footer_catalog">Catálogo</a>
       <a href="https://instagram.com/surfun_experience" target="_blank" rel="noopener noreferrer"
         class="footer-pill">Instagram</a>
     </div>
@@ -234,7 +241,7 @@
     <div
       class="w-100 mx-auto px-4 d-flex flex-column flex-md-row justify-content-between align-items-center extracted-style-67">
       <span>Copyright &copy; 2026 Surf Fun Experience</span>
-      <span class="mt-2 mt-md-0">Hecho en Lobitos</span>
+      <span class="mt-2 mt-md-0" data-i18n="footer_made">Hecho en Lobitos</span>
     </div>
   </footer>
 
@@ -507,6 +514,8 @@
     requestAnimationFrame(raf)
   </script>
 
+  <!-- Sistema de i18n -->
+  <script src="js/translations.js"></script>
 </body>
 
 </html>
