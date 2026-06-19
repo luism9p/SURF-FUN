@@ -433,6 +433,19 @@ function setLanguage(lang) {
     btn.classList.toggle('active', isActive);
   });
 
+  // Actualizar estado visual de los botones
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    if (btn.dataset.lang === lang) {
+      // Activo: Agregar color turquesa, remover grises/transparentes
+      btn.classList.add('text-[#00E5FF]', 'font-bold');
+      btn.classList.remove('text-gray-400', 'text-white/50', 'text-white');
+    } else {
+      // Inactivo: Remover turquesa, agregar blanco translúcido
+      btn.classList.remove('text-[#00E5FF]', 'font-bold');
+      btn.classList.add('text-white/50');
+    }
+  });
+
   // Actualizar atributo lang del <html>
   document.documentElement.setAttribute('lang', lang);
 }
