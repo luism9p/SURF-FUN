@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Evitar que indexen archivos internos que no aportan al SEO
+Disallow: /css/
+Disallow: /js/
+
+# Enlace al Sitemap
+Sitemap: https://www.tudominio.com/sitemap.xml

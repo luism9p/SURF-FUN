@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 
-<body class="text-white mt-0 extracted-style-1" data-bs-spy="scroll" data-bs-target="#navScroll">
+<body class="text-white mt-0 overflow-x-hidden extracted-style-1" data-bs-spy="scroll" data-bs-target="#navScroll">
 
   <div class="fixed top-0 left-0 w-full h-1 z-[100] bg-transparent pointer-events-none extracted-style-2">
     <div id="scroll-progress" class="h-full bg-[#00E5FF] w-0 extracted-style-3"></div>
@@ -52,7 +52,8 @@
           <li><a href="#servicios" data-i18n="nav_services">Servicios</a></li>
           <li><a href="#metodologia" data-i18n="nav_methodology">Metodología</a></li>
           <li><a href="#precios" data-i18n="nav_pricing">Precios</a></li>
-          <li><a href="catalogo.html" class="hover:text-[#00E5FF] transition-colors" data-i18n="nav_catalog">Catálogo</a></li>
+          <li><a href="catalogo.html" class="hover:text-[#00E5FF] transition-colors"
+              data-i18n="nav_catalog">Catálogo</a></li>
         </ul>
       </div>
 
@@ -95,47 +96,53 @@
       </svg>
     </button>
     <a href="#servicios"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_services">Servicios</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0"
+      data-i18n="nav_services">Servicios</a>
     <a href="#metodologia"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_methodology">Metodología</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0"
+      data-i18n="nav_methodology">Metodología</a>
     <a href="#precios"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_pricing">Precios</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0"
+      data-i18n="nav_pricing">Precios</a>
     <a href="catalogo.html"
-      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_catalog">Catálogo</a>
+      class="mobile-link text-4xl font-serif text-white hover:text-[#00E5FF] transition-all duration-500 translate-y-8 opacity-0"
+      data-i18n="nav_catalog">Catálogo</a>
     <!-- Selector de Idioma Móvil -->
     <div class="flex items-center justify-center space-x-6 text-lg mt-8 mb-6 w-full">
-      <button data-lang="es" class="pill-lang-btn text-[#00E5FF] font-bold hover:text-white transition-colors">ES</button>
+      <button data-lang="es"
+        class="pill-lang-btn text-[#00E5FF] font-bold hover:text-white transition-colors">ES</button>
       <span class="text-gray-600">|</span>
       <button data-lang="en" class="pill-lang-btn text-gray-400 hover:text-white transition-colors">EN</button>
       <span class="text-gray-600">|</span>
       <button data-lang="pt" class="pill-lang-btn text-gray-400 hover:text-white transition-colors">PT</button>
     </div>
     <a href="https://wa.me/51991372918?text=Hola%20Surf%20Fun!%20Quiero%20reservar%20una%20clase" target="_blank"
-      class="mobile-link mt-8 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-500 translate-y-8 opacity-0" data-i18n="nav_book">Reserva tu clase</a>
+      class="mobile-link mt-8 bg-[#00E5FF] text-[#07131D] font-bold py-4 px-10 rounded-full text-xl shadow-[0_0_30px_rgba(0,229,255,0.3)] transition-all duration-500 translate-y-8 opacity-0"
+      data-i18n="nav_book">Reserva tu clase</a>
   </div>
 
   <main>
     <!-- ===== HERO SECTION — MARQUEE BACKGROUND ===== -->
-    <div class="position-relative overflow-hidden d-flex align-items-center text-white extracted-style-10">
+    <div class="position-relative overflow-hidden d-flex align-items-center text-white w-full extracted-style-10">
 
       <!-- z-0 | IMAGE TRACK (scrolls left infinitely via CSS animation) -->
       <div class="animate-hero-slide extracted-style-11">
 
         <!-- Set A -->
-        <img src="img/hero.jpg" class="extracted-style-12" alt="Surf Hero Principal">
-        <img src="img/hero1.jpg" class="extracted-style-12" alt="Surf 1">
-        <img src="img/hero2.jpg" class="extracted-style-12" alt="Surf 2">
-        <img src="img/hero3.jpg" class="extracted-style-12" alt="Surf 3">
-        <img src="img/hero4.jpg" class="extracted-style-12" alt="Surf 4">
-        <img src="img/hero5.JPG" class="extracted-style-12" alt="Surf 5">
+        <img src="img/hero.webp" class="extracted-style-12" alt="Surf Hero Principal">
+        <img src="img/hero1.webp" class="extracted-style-12" alt="Surf 1">
+        <img src="img/hero2.webp" class="extracted-style-12" alt="Surf 2">
+        <img src="img/hero3.webp" class="extracted-style-12" alt="Surf 3">
+        <img src="img/hero4.webp" class="extracted-style-12" alt="Surf 4">
+        <img src="img/hero5.webp" class="extracted-style-12" alt="Surf 5">
 
         <!-- Set B — duplicate for seamless infinite loop -->
-        <img src="img/hero.jpg" class="extracted-style-12" alt="Surf Hero Principal">
-        <img src="img/hero1.jpg" class="extracted-style-12" alt="Surf 1">
-        <img src="img/hero2.jpg" class="extracted-style-12" alt="Surf 2">
-        <img src="img/hero3.jpg" class="extracted-style-12" alt="Surf 3">
-        <img src="img/hero4.jpg" class="extracted-style-12" alt="Surf 4">
-        <img src="img/hero5.JPG" class="extracted-style-12" alt="Surf 5">
+        <img src="img/hero.webp" class="extracted-style-12" alt="Surf Hero Principal">
+        <img src="img/hero1.webp" class="extracted-style-12" alt="Surf 1">
+        <img src="img/hero2.webp" class="extracted-style-12" alt="Surf 2">
+        <img src="img/hero3.webp" class="extracted-style-12" alt="Surf 3">
+        <img src="img/hero4.webp" class="extracted-style-12" alt="Surf 4">
+        <img src="img/hero5.webp" class="extracted-style-12" alt="Surf 5">
       </div>
 
       <!-- z-10 | MOBILE overlay: semi-dark across full width -->
@@ -149,7 +156,8 @@
         <div class="extracted-style-16">
           <div class="col-12 col-lg-6 extracted-style-17">
             <span class="extracted-style-18" class="d-block mb-4" data-i18n="hero_location">Lobitos, Perú</span>
-            <h1 class="display-huge mb-4 lh-1" style="color:#ffffff;" data-i18n="hero_title">
+            <h1 class="display-huge mb-4 lh-1 text-4xl sm:text-5xl md:text-6xl lg:text-7xl break-words"
+              style="color:#ffffff;" data-i18n="hero_title">
               VIVE EL SURF
               <span class="extracted-style-19">
                 de forma divertida
@@ -187,7 +195,8 @@
           </div>
           <div class="col-12 col-lg-5" data-aos="fade-left">
             <h3 class="pt-5" style="color:#07131D;" data-i18n="why_h3_levels">Clases para todos los niveles</h3>
-            <p style="color:#475569;" data-i18n="why_p_levels">Aprende desde cero o mejora tu técnica con clases adaptadas a tu nivel, enfocadas
+            <p style="color:#475569;" data-i18n="why_p_levels">Aprende desde cero o mejora tu técnica con clases
+              adaptadas a tu nivel, enfocadas
               en tu progreso personal.<br>
               <a href="https://wa.me/51991372918" target="_blank" rel="noopener noreferrer"
                 class="link-fancy link-fancy-dark me-2" style="color:#00E5FF;" data-i18n="why_more_info">Más info</a>
@@ -197,8 +206,10 @@
                   d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
               </svg>
             </p>
-            <h3 class="border-top border-secondary pt-5 mt-5" style="color:#07131D;" data-i18n="why_h3_close">Acompañamiento Cercano</h3>
-            <p style="color:#475569;"><span data-i18n="why_p_close">Te guiamos paso a paso para que vivas el surf sin presiones.</span><br>
+            <h3 class="border-top border-secondary pt-5 mt-5" style="color:#07131D;" data-i18n="why_h3_close">
+              Acompañamiento Cercano</h3>
+            <p style="color:#475569;"><span data-i18n="why_p_close">Te guiamos paso a paso para que vivas el surf sin
+                presiones.</span><br>
               <a href="https://wa.me/51991372918" target="_blank" rel="noopener noreferrer"
                 class="link-fancy link-fancy-dark me-2" style="color:#00E5FF;">Más info</a>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#00E5FF"
@@ -225,7 +236,8 @@
           <div class="w-20 h-1 bg-[#00E5FF] mb-6"></div>
 
           <!-- Subtítulo -->
-          <span class="text-[#00E5FF] tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-2 block" data-i18n="services_label">
+          <span class="text-[#00E5FF] tracking-[0.2em] text-xs md:text-sm font-bold uppercase mb-2 block"
+            data-i18n="services_label">
             Lo que ofrecemos
           </span>
 
@@ -242,17 +254,16 @@
 
           <!-- ══ Panel 1: Clases Individuales ══ -->
           <div
-            onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20individuales','_blank')"
             class="extracted-style-32">
             <!-- Foto de fondo — sin filtros, color original -->
-            <img src="img/clases-individuales.png" alt="Clases Individuales" class="extracted-style-33">
+            <img src="img/clases-individuales.webp" alt="Clases Individuales" class="extracted-style-33">
             <!-- Capa 1: fondo sólido izquierda → transparente derecha (texto legible) -->
             <div class="extracted-style-34"></div>
             <!-- Capa 2: difuminado de fusión — arranca justo donde el texto termina -->
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
             <div class="absolute inset-0 w-full h-full pointer-events-none flex flex-col justify-center z-20">
-              <div class="w-full max-w-7xl mx-auto px-6 pointer-events-auto">
+              <div class="w-full max-w-7xl mx-auto px-6">
                 <div class="extracted-style-36">
                   <span class="extracted-style-37">01.</span>
                   <h3 class="extracted-style-38" data-i18n="s1_title">
@@ -263,7 +274,7 @@
                     técnica con clases adaptadas a tu nivel.
                   </p>
                   <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20individuales"
-                    target="_blank" rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                    target="_blank" rel="noopener noreferrer" class="extracted-style-40 pointer-events-auto" onmouseover="this.style.opacity='0.7'"
                     onmouseout="this.style.opacity='1'" data-i18n="s1_cta">
                     Saber más &rarr;
                   </a>
@@ -274,25 +285,25 @@
 
           <!-- ══ Panel 2: Clases Grupales ══ -->
           <div
-            onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20grupales','_blank')"
             class="extracted-style-32">
-            <img src="img/clases-grupales2.png" alt="Clases Grupales" class="extracted-style-33">
+            <img src="img/clases-grupales2.webp" alt="Clases Grupales" class="extracted-style-33">
             <div class="extracted-style-34"></div>
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
             <div class="absolute inset-0 w-full h-full pointer-events-none flex flex-col justify-center z-20">
-              <div class="w-full max-w-7xl mx-auto px-6 pointer-events-auto">
+              <div class="w-full max-w-7xl mx-auto px-6">
                 <div class="extracted-style-36">
                   <span class="extracted-style-37">02.</span>
                   <h3 class="extracted-style-38" data-i18n="s2_title">
                     Clases Grupales
                   </h3>
                   <p class="extracted-style-39" data-i18n="s2_desc">
-                    Sesiones dinámicas donde aprenderás a surfear compartiendo las olas con un grupo increíble. La energía
+                    Sesiones dinámicas donde aprenderás a surfear compartiendo las olas con un grupo increíble. La
+                    energía
                     del grupo multiplica el progreso.
                   </p>
-                  <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20grupales" target="_blank"
-                    rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                  <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20clases%20grupales"
+                    target="_blank" rel="noopener noreferrer" class="extracted-style-40 pointer-events-auto" onmouseover="this.style.opacity='0.7'"
                     onmouseout="this.style.opacity='1'" data-i18n="s2_cta">
                     Saber más &rarr;
                   </a>
@@ -303,14 +314,13 @@
 
           <!-- ══ Panel 3: Surf Trips ══ -->
           <div
-            onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20surf%20trips','_blank')"
             class="extracted-style-32">
-            <img src="img/surf-trips1.png" alt="Surf Trips" class="extracted-style-33">
+            <img src="img/surf-trips1.webp" alt="Surf Trips" class="extracted-style-33">
             <div class="extracted-style-34"></div>
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
             <div class="absolute inset-0 w-full h-full pointer-events-none flex flex-col justify-center z-20">
-              <div class="w-full max-w-7xl mx-auto px-6 pointer-events-auto">
+              <div class="w-full max-w-7xl mx-auto px-6">
                 <div class="extracted-style-36">
                   <span class="extracted-style-37">03.</span>
                   <h3 class="extracted-style-38" data-i18n="s3_title">
@@ -321,7 +331,7 @@
                     Exploramos juntos los mejores spots.
                   </p>
                   <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20surf%20trips" target="_blank"
-                    rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                    rel="noopener noreferrer" class="extracted-style-40 pointer-events-auto" onmouseover="this.style.opacity='0.7'"
                     onmouseout="this.style.opacity='1'" data-i18n="s3_cta">
                     Saber más &rarr;
                   </a>
@@ -332,14 +342,13 @@
 
           <!-- ══ Panel 4: Videoanálisis ══ -->
           <div
-            onclick="window.open('https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20videoanalisis','_blank')"
             class="extracted-style-32">
-            <img src="img/2.png" alt="Videoanálisis" class="extracted-style-33">
+            <img src="img/2.webp" alt="Videoanálisis" class="extracted-style-33">
             <div class="extracted-style-34"></div>
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
             <div class="absolute inset-0 w-full h-full pointer-events-none flex flex-col justify-center z-20">
-              <div class="w-full max-w-7xl mx-auto px-6 pointer-events-auto">
+              <div class="w-full max-w-7xl mx-auto px-6">
                 <div class="extracted-style-36">
                   <span class="extracted-style-37">04.</span>
                   <h3 class="extracted-style-38" data-i18n="s4_title">
@@ -350,7 +359,7 @@
                     preciso para acelerar tu progreso.
                   </p>
                   <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20info%20sobre%20videoanalisis" target="_blank"
-                    rel="noopener" class="extracted-style-40" onmouseover="this.style.opacity='0.7'"
+                    rel="noopener noreferrer" class="extracted-style-40 pointer-events-auto" onmouseover="this.style.opacity='0.7'"
                     onmouseout="this.style.opacity='1'" data-i18n="s4_cta">
                     Saber más &rarr;
                   </a>
@@ -374,7 +383,8 @@
 
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="mb-20 md:mb-32 max-w-3xl">
-          <p class="text-xs font-bold tracking-[0.2em] uppercase mb-4" style="color: #00E5FF;" data-i18n="about_label">Nuestra Esencia</p>
+          <p class="text-xs font-bold tracking-[0.2em] uppercase mb-4" style="color: #00E5FF;" data-i18n="about_label">
+            Nuestra Esencia</p>
           <h2 class="font-serif text-5xl md:text-7xl text-white leading-tight" data-i18n="about_title">
             Conectando personas con el <span class="italic" style="color: #00E5FF;">mar</span>.
           </h2>
@@ -412,7 +422,8 @@
       <div class="max-w-7xl mx-auto relative extracted-style-44">
 
         <div class="extracted-style-45">
-          <p class="font-bold tracking-widest text-sm uppercase mb-4" style="color: #00E5FF;" data-i18n="method_label">Así es una clase con nosotros</p>
+          <p class="font-bold tracking-widest text-sm uppercase mb-4" style="color: #00E5FF;" data-i18n="method_label">
+            Así es una clase con nosotros</p>
           <h2 class="font-serif text-5xl lg:text-6xl leading-tight" style="color: #0f172a;" data-i18n="method_title">
             Nuestra <br /><span class="italic" style="color: #00E5FF;">Metodología</span>
           </h2>
@@ -464,11 +475,13 @@
 
         <!-- Encabezado de sección -->
         <div class="text-center mb-16">
-          <span class="text-[#00E5FF] tracking-[0.2em] text-xs font-bold uppercase mb-4 block" data-i18n="pricing_label">Clases &amp; Equipamiento</span>
+          <span class="text-[#00E5FF] tracking-[0.2em] text-xs font-bold uppercase mb-4 block"
+            data-i18n="pricing_label">Clases &amp; Equipamiento</span>
           <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif text-white leading-tight" data-i18n="pricing_title">
             Precios y <span class="text-[#00E5FF] italic font-light">Tarifas</span>
           </h2>
-          <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto" data-i18n="pricing_desc">Todo lo que necesitas para vivir el surf en Lobitos:
+          <p class="text-gray-400 text-lg mt-4 max-w-2xl mx-auto" data-i18n="pricing_desc">Todo lo que necesitas para
+            vivir el surf en Lobitos:
             clases con instructores certificados y equipamiento de calidad listo para usar.</p>
         </div>
 
@@ -579,7 +592,8 @@
                     d="M5.5 2A3.5 3.5 0 0 0 2 5.5v5A3.5 3.5 0 0 0 5.5 14h5a3.5 3.5 0 0 0 3.5-3.5v-5A3.5 3.5 0 0 0 10.5 2h-5zm6 5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1zm-3 3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 1 0v1a.5.5 0 0 1-.5.5zm0-6a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 1 0v1a.5.5 0 0 1-.5.5zM4 8.5a.5.5 0 0 1-.5-.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5zm4.5-4a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-3 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm6 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm-3-9a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
                 </svg>
               </div>
-              <h3 class="text-white font-bold text-2xl font-serif" data-i18n="rental_section">Alquiler de Equipamiento</h3>
+              <h3 class="text-white font-bold text-2xl font-serif" data-i18n="rental_section">Alquiler de Equipamiento
+              </h3>
             </div>
 
             <!-- Tabla de tarifas de alquiler (Refactorizada a CSS Grid) -->
@@ -684,7 +698,7 @@
             <!-- Info imagen + CTA alquiler -->
             <div class="mt-6 relative rounded-2xl overflow-hidden shadow-xl">
               <div class="aspect-[16/7] relative">
-                <img src="img/local-tablas-2.jpg" alt="Tablas de surf" class="w-full h-full object-cover">
+                <img src="img/local-tablas-2.webp" alt="Tablas de surf" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#07131D]/90 via-[#07131D]/60 to-transparent"></div>
                 <div class="absolute inset-0 flex flex-col justify-center px-6">
                   <p class="text-white font-bold text-lg leading-snug mb-3">Tablas y wetsuits<br><span
@@ -705,7 +719,8 @@
             <div class="mt-6">
               <a href="https://wa.me/51991372918?text=Hola!%20Quiero%20consultar%20por%20alquiler%20de%20equipos"
                 target="_blank" rel="noopener noreferrer"
-                class="w-full inline-flex items-center justify-center gap-2 bg-transparent border-2 border-[#00E5FF] text-[#00E5FF] font-bold py-4 px-8 rounded-full text-lg hover:bg-[#00E5FF] hover:text-[#07131D] transition-all shadow-[0_4px_20px_rgba(0,229,255,0.15)] hover:shadow-[0_4px_20px_rgba(0,229,255,0.4)]" data-i18n="rental_cta">
+                class="w-full inline-flex items-center justify-center gap-2 bg-transparent border-2 border-[#00E5FF] text-[#00E5FF] font-bold py-4 px-8 rounded-full text-lg hover:bg-[#00E5FF] hover:text-[#07131D] transition-all shadow-[0_4px_20px_rgba(0,229,255,0.15)] hover:shadow-[0_4px_20px_rgba(0,229,255,0.4)]"
+                data-i18n="rental_cta">
                 Consultar Alquiler
               </a>
             </div>
@@ -718,185 +733,10 @@
         </div>
       </div>
     </section>
-    <div class="extracted-style-52">
-      <div class="container px-vw-5">
-        <div class="row d-flex gx-5 align-items-center">
-          <div class="col-12 col-lg-6">
-            <div class="rounded-5 bg-black p-5 shadow" data-aos="zoom-in-right">
-              <div class="fs-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-              </div>
-              <p class="text-secondary lead">"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et
-                dolore magna aliqua ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
-              <div class="d-flex justify-content-start align-items-center border-top border-secondary pt-3">
-                <img src="img/webp/person14.webp" width="96" height="96" class="rounded-circle me-3" alt="a nice person"
-                  data-aos="fade" loading="lazy">
-                <div>
-                  <span class="h6 fw-5">Jane Doemunsky</span><br>
-                  <small class="text-secondary">COO, The Boo Corp.</small>
-                </div>
-              </div>
-            </div>
-            <div class="rounded-5 bg-black p-5 shadow mt-5" data-aos="zoom-in-right">
-              <div class="fs-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-half" viewBox="0 0 16 16">
-                  <path
-                    d="M5.354 5.119 7.538.792A.516.516 0 0 1 8 .5c.183 0 .366.097.465.292l2.184 4.327 4.898.696A.537.537 0 0 1 16 6.32a.548.548 0 0 1-.17.445l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256a.52.52 0 0 1-.146.05c-.342.06-.668-.254-.6-.642l.83-4.73L.173 6.765a.55.55 0 0 1-.172-.403.58.58 0 0 1 .085-.302.513.513 0 0 1 .37-.245l4.898-.696zM8 12.027a.5.5 0 0 1 .232.056l3.686 1.894-.694-3.957a.565.565 0 0 1 .162-.505l2.907-2.77-4.052-.576a.525.525 0 0 1-.393-.288L8.001 2.223 8 2.226v9.8z" />
-                </svg>
-
-              </div>
-              <p class="text-secondary lead">"Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam. quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat."</p>
-              <div class="d-flex justify-content-start align-items-center border-top border-secondary pt-3">
-                <img src="img/webp/person13.webp" width="96" height="96" class="rounded-circle me-3" alt="a nice person"
-                  data-aos="fade" loading="lazy">
-                <div>
-                  <span class="h6 fw-5">Jane Doemunsky</span><br>
-                  <small class="text-secondary">COO, The Boo Corp.</small>
-                </div>
-              </div>
-            </div>
-
-          </div>
-          <div class="col-12 col-lg-6">
-            <div class="p-5 pt-0" data-aos="fade">
-              <span class="h5 text-secondary fw-lighter">What others have to say</span>
-              <h2 class="display-4">Invidunt ut labore et dolore magna aliquyam erat.</h2>
-            </div>
-            <div class="rounded-5 bg-black p-5 shadow mt-5 gradient" data-aos="zoom-in-left">
-              <div class="fs-1">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-star-fill" viewBox="0 0 16 16">
-                  <path
-                    d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
-                </svg>
-
-
-              </div>
-              <p class="lead">"Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat."</p>
-              <div class="d-flex justify-content-start align-items-center border-top pt-3">
-                <img src="img/webp/person16.webp" width="96" height="96" class="rounded-circle me-3" alt="a nice person"
-                  data-aos="fade" loading="lazy">
-                <div>
-                  <span class="h6 fw-5">Jane Doemunsky</span><br>
-                  <small>COO, The Boo Corp.</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
   </main>
-
-
 
   <!-- SECCIÓN UBICACIÓN (REDISEÑO EDITORIAL) -->
   <section class="relative py-24 lg:py-32 position-relative extracted-style-53">
-
-    <!-- Imagen de Fondo con Overlay -->
-    <div class="absolute inset-0 z-0 extracted-style-54">
-      <img src="img/local-living.jpg" class="w-full h-full object-cover opacity-20 extracted-style-55"
-        alt="Fondo Lobitos">
-      <div class="absolute inset-0 bg-gradient-to-r from-[#07131D] via-[#07131D]/95 to-[#07131D]/80 extracted-style-56">
-      </div>
-    </div>
 
     <!-- Contenido -->
     <div class="relative z-10 max-w-7xl mx-auto px-6 container extracted-style-57">
@@ -904,22 +744,26 @@
 
         <!-- Columna Izquierda (Info) -->
         <div class="col-12 col-lg-6" data-aos="fade-right">
-          <div class="text-[#00E5FF] text-xs font-bold tracking-[0.2em] uppercase mb-4 extracted-style-58" data-i18n="location_label">
+          <div class="text-[#00E5FF] text-xs font-bold tracking-[0.2em] uppercase mb-4 extracted-style-58"
+            data-i18n="location_label">
             LA UBICACIÓN</div>
-          <h2 class="font-serif text-6xl md:text-7xl text-white mb-6 leading-tight extracted-style-59" data-i18n="location_title">
+          <h2 class="font-serif text-6xl md:text-7xl text-white mb-6 leading-tight extracted-style-59"
+            data-i18n="location_title">
             Nuestro Spot.</h2>
           <p class="font-sans text-slate-300 text-lg max-w-md mb-10 extracted-style-60" data-i18n="location_desc">
             Ubicados directamente en la playa de Lobitos, donde las olas son perfectas para cada nivel de surfista.
           </p>
 
           <div class="extracted-style-61">
-            <div class="text-slate-500 text-xs tracking-wider mb-1 extracted-style-62" data-i18n="location_tag">UBICACIÓN
+            <div class="text-slate-500 text-xs tracking-wider mb-1 extracted-style-62" data-i18n="location_tag">
+              UBICACIÓN
             </div>
             <div class="text-white text-lg extracted-style-63" data-i18n="location_value">Lobitos Beach, Perú</div>
           </div>
 
           <div>
-            <div class="text-slate-500 text-xs tracking-wider mb-1 extracted-style-62" data-i18n="schedule_tag">HORARIO</div>
+            <div class="text-slate-500 text-xs tracking-wider mb-1 extracted-style-62" data-i18n="schedule_tag">HORARIO
+            </div>
             <div class="text-white text-lg extracted-style-63" data-i18n="schedule_value">8:00 AM – 6:00 PM</div>
           </div>
         </div>
@@ -963,7 +807,7 @@
 
     <!-- El Logotipo Gigante -->
     <div class="w-100 px-4 mx-auto extracted-style-65">
-      <img src="img/surf-fun-footer.png" alt="Surf Fun Experience"
+      <img src="img/surf-fun-footer.webp" alt="Surf Fun Experience"
         class="w-100 h-auto pe-none user-select-none extracted-style-66">
     </div>
 
