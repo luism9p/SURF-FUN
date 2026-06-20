@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vincular botones de apertura del modal
     // Detecta cualquier botón/enlace con texto relacionado a "Reserva"
     // ──────────────────────────────────────────
-    // Vincular botones de apertura (Navbar y Hero)
+    // Vincular botones de apertura (Navbar y Hero y Precios)
     document.querySelectorAll('a, button').forEach(el => {
         const text = el.textContent.toLowerCase();
         if(text.includes('reserva tu clase') || text.includes('book your class') || text.includes('reserve sua aula') || 
-           text.includes('agenda tu clase') || text.includes('agende sua aula')) {
+           text.includes('agenda tu clase') || text.includes('agende sua aula') || text.includes('reservar mi clase')) {
             el.addEventListener('click', openModal);
         }
     });
