@@ -531,7 +531,9 @@ html.lenis {
     position: absolute;
     inset: 0;
     z-index: 10;
-    background: linear-gradient(to right, #07131D 0%, #07131D 30%, rgba(7, 19, 29, 0.75) 50%, transparent 72%);
+    background:
+        linear-gradient(to right, #07131D 0%, #07131D 30%, rgba(7, 19, 29, 0.75) 50%, transparent 72%),
+        linear-gradient(to top, #07131D 0%, rgba(7, 19, 29, 0.60) 40%, transparent 70%);
 }
 
 .extracted-style-35 {
@@ -539,7 +541,19 @@ html.lenis {
     inset: 0;
     z-index: 11;
     pointer-events: none;
-    background: linear-gradient(to right, transparent 28%, rgba(7, 19, 29, 0.18) 40%, transparent 55%)
+    background: linear-gradient(to right, transparent 28%, rgba(7, 19, 29, 0.18) 40%, transparent 55%);
+}
+
+/* Refuerzo de overlay en móvil — gradiente vertical más marcado */
+@media (max-width: 767px) {
+    .extracted-style-34 {
+        background:
+            linear-gradient(to top, #07131D 0%, rgba(7, 19, 29, 0.85) 45%, rgba(7, 19, 29, 0.30) 75%, transparent 100%),
+            linear-gradient(to right, rgba(7, 19, 29, 0.70) 0%, rgba(7, 19, 29, 0.40) 50%, transparent 100%);
+    }
+    .extracted-style-35 {
+        background: linear-gradient(to top, rgba(7, 19, 29, 0.50) 0%, transparent 55%);
+    }
 }
 
 .extracted-style-36 {
@@ -557,6 +571,7 @@ html.lenis {
     color: #00E5FF;
     line-height: 1;
     margin-bottom: 0.5rem;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8), 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .extracted-style-38 {
@@ -566,6 +581,7 @@ html.lenis {
     margin: 0 0 1rem;
     letter-spacing: -0.02em;
     line-height: 1.1;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .extracted-style-39 {
@@ -574,6 +590,7 @@ html.lenis {
     font-size: 1rem;
     margin-bottom: 2rem;
     line-height: 1.7;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .extracted-style-40 {
