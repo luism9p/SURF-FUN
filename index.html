@@ -1316,6 +1316,37 @@
   <!-- Surf Conditions JS -->
   <script src="js/surf-conditions.js"></script>
 
+  <script>
+    // Limpiador de URL para anclas (Hashes)
+    window.addEventListener('DOMContentLoaded', () => {
+        // 1. Limpiar el hash al llegar desde otra página (ej. catalogo.html -> index.html#precios)
+        if (window.location.hash) {
+            const target = document.querySelector(window.location.hash);
+            if (target) {
+                // Permitimos que el navegador haga el salto natural, luego limpiamos la URL
+                setTimeout(() => {
+                    history.replaceState(null, null, window.location.pathname);
+                }, 100); 
+            }
+        }
+
+        // 2. Limpiar el hash al hacer clic en los enlaces internos de la misma página
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // Limpiamos la URL inmediatamente
+                    history.replaceState(null, null, window.location.pathname);
+                }
+            });
+        });
+    });
+  </script>
 </body>
 
 </html>
