@@ -65,7 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const showStep = (step) => {
         document.querySelectorAll('.booking-step').forEach(el => el.classList.add('hidden'));
         document.getElementById(`step-${step}`).classList.remove('hidden');
-        stepText.textContent = `Paso ${step} de 3`;
+
+        // Manejo del texto del paso con internacionalización
+        const lang = typeof currentLang !== 'undefined' ? currentLang : 'es';
+        let stepString = "Paso {step} de 3";
+        if (typeof translations !== 'undefined' && translations[lang] && translations[lang]['modal_step']) {
+            stepString = translations[lang]['modal_step'];
+        }
+        // Asumiendo que la traducción pueda tener formato "Paso 1 de 3", reemplazamos el "1" por el step actual.
+        // O más seguro, definimos en las traducciones el paso como genérico, pero ya está en el HTML.
+        // Reemplazamos el número (1, 2 o 3) con el valor de `step`.
+        stepText.textContent = stepString.replace(/1|2|3/, step);
 
         // Actualizar los puntos de progreso
         const dots = document.querySelectorAll('.step-dot');

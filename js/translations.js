@@ -9,6 +9,7 @@ const translations = {
     nav_methodology: "Metodología",
     nav_pricing: "Precios",
     nav_catalog: "Catálogo",
+    nav_conditions: "Condiciones",
     nav_book: "Reserva tu clase",
 
     // ── Hero ──
@@ -134,6 +135,38 @@ const translations = {
     cat_cta_btn: "Alquilar por WhatsApp",
     cat_modal_rent: "Alquilar esta tabla",
     cat_card_detail: "+ Ver detalles",
+
+    // ── Booking Modal ──
+    modal_step: "Paso 1 de 3",
+    modal_subtitle_1: "Elige cómo quieres comenzar",
+    modal_title_1: "Elige tu <span class=\"text-[#00E5FF] italic\">paquete</span>",
+    modal_pack_indiv: "Individual",
+    modal_pack_1_title: "1 Clase",
+    modal_pack_1_desc: "60–75 min · Equipo incluido",
+    modal_pack_popular: "POPULAR",
+    modal_pack_group: "Grupal",
+    modal_pack_2_title: "5 Clases",
+    modal_pack_2_desc: "S/80 por clase",
+    modal_pack_3_title: "10 Clases",
+    modal_pack_3_desc: "S/70 por clase",
+    modal_select_pack: "Selecciona un paquete para continuar &rarr;",
+    modal_btn_back: "&larr; Volver",
+    modal_title_2: "Selecciona fecha",
+    modal_day_su: "Do",
+    modal_day_mo: "Lu",
+    modal_day_tu: "Ma",
+    modal_day_we: "Mi",
+    modal_day_th: "Ju",
+    modal_day_fr: "Vi",
+    modal_day_sa: "Sa",
+    modal_avail_times: "Horarios disponibles",
+    modal_btn_continue: "Continuar",
+    modal_title_3: "Tus datos",
+    modal_input_name: "Nombre completo",
+    modal_summary_pack: "Paquete",
+    modal_summary_date: "Fecha",
+    modal_summary_time: "Hora",
+    modal_btn_confirm: "Confirmar",
   },
 
   en: {
@@ -142,6 +175,7 @@ const translations = {
     nav_methodology: "Methodology",
     nav_pricing: "Pricing",
     nav_catalog: "Catalog",
+    nav_conditions: "Conditions",
     nav_book: "Book your class",
 
     // ── Hero ──
@@ -269,6 +303,38 @@ const translations = {
     cat_cta_btn: "Rent via WhatsApp",
     cat_modal_rent: "Rent this board",
     cat_card_detail: "+ View details",
+
+    // ── Booking Modal ──
+    modal_step: "Step 1 of 3",
+    modal_subtitle_1: "Choose how you want to start",
+    modal_title_1: "Choose your <span class=\"text-[#00E5FF] italic\">package</span>",
+    modal_pack_indiv: "Individual",
+    modal_pack_1_title: "1 Class",
+    modal_pack_1_desc: "60–75 min · Equipment included",
+    modal_pack_popular: "POPULAR",
+    modal_pack_group: "Group",
+    modal_pack_2_title: "5 Classes",
+    modal_pack_2_desc: "S/80 per class",
+    modal_pack_3_title: "10 Classes",
+    modal_pack_3_desc: "S/70 per class",
+    modal_select_pack: "Select a package to continue &rarr;",
+    modal_btn_back: "&larr; Back",
+    modal_title_2: "Select date",
+    modal_day_su: "Su",
+    modal_day_mo: "Mo",
+    modal_day_tu: "Tu",
+    modal_day_we: "We",
+    modal_day_th: "Th",
+    modal_day_fr: "Fr",
+    modal_day_sa: "Sa",
+    modal_avail_times: "Available times",
+    modal_btn_continue: "Continue",
+    modal_title_3: "Your details",
+    modal_input_name: "Full name",
+    modal_summary_pack: "Package",
+    modal_summary_date: "Date",
+    modal_summary_time: "Time",
+    modal_btn_confirm: "Confirm",
   },
 
   pt: {
@@ -277,6 +343,7 @@ const translations = {
     nav_methodology: "Metodologia",
     nav_pricing: "Preços",
     nav_catalog: "Catálogo",
+    nav_conditions: "Condições",
     nav_book: "Reserve sua aula",
 
     // ── Hero ──
@@ -404,6 +471,38 @@ const translations = {
     cat_cta_btn: "Alugar pelo WhatsApp",
     cat_modal_rent: "Alugar esta prancha",
     cat_card_detail: "+ Ver detalhes",
+
+    // ── Booking Modal ──
+    modal_step: "Passo 1 de 3",
+    modal_subtitle_1: "Escolha como deseja começar",
+    modal_title_1: "Escolha seu <span class=\"text-[#00E5FF] italic\">pacote</span>",
+    modal_pack_indiv: "Individual",
+    modal_pack_1_title: "1 Aula",
+    modal_pack_1_desc: "60–75 min · Equipamento incluso",
+    modal_pack_popular: "POPULAR",
+    modal_pack_group: "Grupo",
+    modal_pack_2_title: "5 Aulas",
+    modal_pack_2_desc: "S/80 por aula",
+    modal_pack_3_title: "10 Aulas",
+    modal_pack_3_desc: "S/70 por aula",
+    modal_select_pack: "Selecione um pacote para continuar &rarr;",
+    modal_btn_back: "&larr; Voltar",
+    modal_title_2: "Selecionar data",
+    modal_day_su: "Do",
+    modal_day_mo: "Se",
+    modal_day_tu: "Te",
+    modal_day_we: "Qa",
+    modal_day_th: "Qi",
+    modal_day_fr: "Se",
+    modal_day_sa: "Sá",
+    modal_avail_times: "Horários disponíveis",
+    modal_btn_continue: "Continuar",
+    modal_title_3: "Seus dados",
+    modal_input_name: "Nome completo",
+    modal_summary_pack: "Pacote",
+    modal_summary_date: "Data",
+    modal_summary_time: "Hora",
+    modal_btn_confirm: "Confirmar",
   }
 };
 
@@ -422,6 +521,14 @@ function setLanguage(lang) {
     const key = el.getAttribute('data-i18n');
     if (translations[lang][key] !== undefined) {
       el.innerHTML = translations[lang][key];
+    }
+  });
+
+  // Actualizar placeholders con data-i18n-placeholder
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (translations[lang][key] !== undefined) {
+      el.setAttribute('placeholder', translations[lang][key]);
     }
   });
 
