@@ -36,28 +36,60 @@ async function updateSurfConditions() {
                 const maxH = (wh + 0.2).toFixed(1);
                 elHeight.textContent = `${minH} - ${maxH}m`;
 
-                // Give it a human-readable subtext based on height
-                let humanSub = "Plano o muy pequeño";
-                if (wh > 0.6 && wh < 1.2) humanSub = "Por la rodilla/cintura";
-                if (wh >= 1.2 && wh < 1.8) humanSub = "Por la cintura/pecho";
-                if (wh >= 1.8 && wh < 2.5) humanSub = "Overhead (Por encima de la cabeza)";
-                if (wh >= 2.5) humanSub = "Doble Overhead+";
-                elSubHeight.textContent = humanSub;
+                // Detectar idioma actual del documento
+                const currentLang = document.documentElement.lang || 'es';
 
-                // Dynamic Rating Banner
+                // 1. Textos dinámicos para el tamaño de olas
+                let subEs = "Plano o muy pequeño";
+                let subEn = "Flat or very small";
+                let subPt = "Plano ou muito pequeno";
+
+                if (wh > 0.6 && wh < 1.2) {
+                    subEs = "Por la rodilla/cintura"; subEn = "Knee/Waist high"; subPt = "Pelo joelho/cintura";
+                } else if (wh >= 1.2 && wh < 1.8) {
+                    subEs = "Por la cintura/pecho"; subEn = "Waist/Chest high"; subPt = "Pela cintura/peito";
+                } else if (wh >= 1.8 && wh < 2.5) {
+                    subEs = "Por encima de la cabeza"; subEn = "Overhead"; subPt = "Acima da cabeça";
+                } else if (wh >= 2.5) {
+                    subEs = "Doble Overhead+"; subEn = "Double Overhead+"; subPt = "Duplo Overhead+";
+                }
+
+                // Inyectar atributos para futuros clicks del traductor
+                elSubHeight.setAttribute('data-es', subEs);
+                elSubHeight.setAttribute('data-en', subEn);
+                elSubHeight.setAttribute('data-pt', subPt);
+
+                // Renderizar inmediatamente en el idioma actual
+                elSubHeight.textContent = currentLang === 'en' ? subEn : (currentLang === 'pt' ? subPt : subEs);
+
+                // 2. Textos dinámicos para el estado del mar
                 const ratingEl = document.getElementById('api-surf-rating');
                 if (ratingEl) {
-                    const baseClasses = "font-medium tracking-wide";
+                    let icon = "";
+                    let rateEs = "", rateEn = "", ratePt = "";
+                    let colorClass = "";
+
                     if (wh < 1.2) {
-                        ratingEl.textContent = "🟢 PERFECTO PARA APRENDER";
-                        ratingEl.className = `${baseClasses} text-green-400`;
+                        icon = "🟢"; colorClass = "text-green-400";
+                        rateEs = "PERFECTO PARA APRENDER"; rateEn = "PERFECT FOR BEGINNERS"; ratePt = "PERFEITO PARA APRENDER";
                     } else if (wh >= 1.2 && wh < 1.9) {
-                        ratingEl.textContent = "🟡 DIVERSIÓN / INTERMEDIO";
-                        ratingEl.className = `${baseClasses} text-yellow-400`;
+                        icon = "🟡"; colorClass = "text-yellow-400";
+                        rateEs = "DIVERSIÓN / INTERMEDIO"; rateEn = "FUN / INTERMEDIATE"; ratePt = "DIVERSÃO / INTERMEDIÁRIO";
                     } else {
-                        ratingEl.textContent = "🔴 SOLO EXPERTOS";
-                        ratingEl.className = `${baseClasses} text-red-400`;
+                        icon = "🔴"; colorClass = "text-red-400";
+                        rateEs = "SOLO EXPERTOS"; rateEn = "EXPERTS ONLY"; ratePt = "SÓ EXPERIENTES";
                     }
+
+                    // Actualizar clases visuales
+                    ratingEl.className = `text-sm md:text-base font-bold tracking-wider flex items-center gap-2 ${colorClass}`;
+
+                    // Inyectar atributos combinando icono + texto
+                    ratingEl.setAttribute('data-es', `${icon} ${rateEs}`);
+                    ratingEl.setAttribute('data-en', `${icon} ${rateEn}`);
+                    ratingEl.setAttribute('data-pt', `${icon} ${ratePt}`);
+
+                    // Renderizar inmediatamente
+                    ratingEl.textContent = currentLang === 'en' ? `${icon} ${rateEn}` : (currentLang === 'pt' ? `${icon} ${ratePt}` : `${icon} ${rateEs}`);
                 }
 
                 // Card 2: Swell
@@ -94,6 +126,9 @@ async function updateSurfConditions() {
             }
         }
 
+        // Ejecutar traducción inmediatamente después de inyectar datos
+        translateSurfWidget();
+
     } catch (e) {
         console.error("Error fetching Dashboard data:", e);
     }
@@ -101,3 +136,38 @@ async function updateSurfConditions() {
 
 // Call on load
 document.addEventListener('DOMContentLoaded', updateSurfConditions);
+
+// ==========================================
+// AUTOTRADUCTOR REACTIVO DEL WIDGET DE SURF
+// ==========================================
+function translateSurfWidget() {
+    // Obtenemos el idioma actual de la etiqueta <html> (ej. 'es', 'en', 'pt')
+    const currentLang = document.documentElement.lang || 'es';
+    const widget = document.getElementById('condiciones');
+    
+    if (!widget) return;
+
+    // Seleccionamos todo elemento dentro del widget que tenga opciones de idioma
+    const translatableElements = widget.querySelectorAll('[data-es], [data-en], [data-pt]');
+    
+    translatableElements.forEach(el => {
+        const translation = el.getAttribute(`data-${currentLang}`);
+        if (translation) {
+            // Usamos innerHTML para soportar los iconos/spans inyectados en el DOM
+            el.innerHTML = translation;
+        }
+    });
+}
+
+// 1. Configurar MutationObserver para detectar clics en el selector de idiomas global
+const langObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+        // Si el script global cambia el 'lang' del HTML, forzamos la traducción aquí
+        if (mutation.attributeName === 'lang') {
+            translateSurfWidget();
+        }
+    });
+});
+
+// Iniciar la observación en el elemento raíz
+langObserver.observe(document.documentElement, { attributes: true });

@@ -761,27 +761,27 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col gap-8">
                 <header class="text-center w-full">
-                <h2 class="text-3xl md:text-4xl font-light text-white mb-2" data-en="Surf Conditions" data-es="Condiciones Actuales">
+                <h2 class="text-3xl md:text-4xl font-light text-white mb-2" data-es="Condiciones Actuales" data-en="Surf Conditions" data-pt="Condições Atuais">
                     Condiciones Actuales
                 </h2>
             </header>
 
             <div class="flex flex-col md:flex-row items-center justify-between bg-[#0a1b2a] border border-white/10 rounded-2xl p-4 md:px-8 hover:border-[#00E5FF]/50 transition-colors duration-300">
                 <span class="text-gray-400 tracking-widest uppercase text-sm font-medium mb-2 md:mb-0" data-en="Lobitos Sea Condition" data-es="Estado del Mar en Lobitos">Estado del Mar en Lobitos</span>
-                <span id="api-surf-rating" class="font-medium tracking-wide text-gray-400">Calculando...</span>
+                <span id="api-surf-rating" class="font-medium tracking-wide text-gray-400" data-es="Cargando..." data-en="Loading..." data-pt="Carregando...">Calculando...</span>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
                 <!-- CARD 1: SURF HEIGHT -->
                 <div class="flex flex-col bg-[#0a1b2a] border border-white/10 rounded-2xl p-6 hover:border-[#00E5FF]/50 transition-colors duration-300">
-                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3">TAMAÑO DE OLAS</span>
+                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3" data-es="Tamaño de Olas" data-en="Wave Size" data-pt="Tamanho das Ondas">TAMAÑO DE OLAS</span>
                     <div class="text-4xl font-light text-white mb-2" id="api-surf-height">0.9 - 1.4m</div>
                     <div class="text-sm text-gray-400" id="api-surf-sub">Por la cintura/hombro</div>
                 </div>
 
                 <!-- CARD 2: SWELL -->
                 <div class="flex flex-col bg-[#0a1b2a] border border-white/10 rounded-2xl p-6 hover:border-[#00E5FF]/50 transition-colors duration-300">
-                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3">OLEAJE</span>
+                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3" data-es="Oleaje (Swell)" data-en="Swell" data-pt="Ondulação (Swell)">OLEAJE</span>
                     <div class="flex items-center gap-2 text-2xl font-light text-white mb-2" id="api-swell-primary">
                         <span id="api-swell-height">1.1m</span>
                         <span class="text-white/20">|</span>
@@ -796,14 +796,14 @@
 
                 <!-- CARD 3: WIND -->
                 <div class="flex flex-col bg-[#0a1b2a] border border-white/10 rounded-2xl p-6 hover:border-[#00E5FF]/50 transition-colors duration-300">
-                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3">VIENTO</span>
+                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3" data-es="Viento" data-en="Wind" data-pt="Vento">VIENTO</span>
                     <div class="text-3xl font-light text-white mb-2 flex items-center" id="api-wind">22 kph SO</div>
                     <div class="text-sm text-gray-400">Ráfagas 25kph, Onshore</div>
                 </div>
 
                 <!-- CARD 4: TEMPERATURE -->
                 <div class="flex flex-col bg-[#0a1b2a] border border-white/10 rounded-2xl p-6 hover:border-[#00E5FF]/50 transition-colors duration-300">
-                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3">TEMPERATURA</span>
+                    <span class="text-[#00E5FF] tracking-widest uppercase text-xs font-semibold mb-3" data-es="Temperatura" data-en="Temperature" data-pt="Temperatura">TEMPERATURA</span>
                     <div class="flex items-center flex-wrap gap-2 text-2xl font-light text-white mb-2">
                         <svg class="w-6 h-6 text-blue-300/70" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 2.25c-5.385 7.42-7.5 10.96-7.5 13.5a7.5 7.5 0 0015 0c0-2.54-2.115-6.08-7.5-13.5z"></path>
@@ -819,7 +819,7 @@
                         <span id="api-temp-air">25°C</span>
                         <span class="text-sm text-gray-400">(Aire)</span>
                     </div>
-                    <div class="text-sm text-gray-400">Wetsuit recomendado: 3/2mm</div>
+                    <div class="text-sm text-gray-400" data-es="Wetsuit recomendado: 3/2mm" data-en="Recommended Wetsuit: 3/2mm" data-pt="Wetsuit recomendado: 3/2mm">Wetsuit recomendado: 3/2mm</div>
                 </div>
             </div>
             </div>
