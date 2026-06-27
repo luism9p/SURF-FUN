@@ -313,9 +313,15 @@ html.lenis {
 }
 
 .extracted-style-6 {
-    height: 2.25rem;
+    height: 3.25rem;
     width: auto;
     display: block;
+}
+
+@media (min-width: 768px) {
+    .extracted-style-6 {
+        height: 4rem;
+    }
 }
 
 .extracted-style-7 {
