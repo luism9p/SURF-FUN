@@ -6,4 +6,4 @@ Disallow: /css/
 Disallow: /js/
 
 # Enlace al Sitemap
-Sitemap: https://www.tudominio.com/sitemap.xml
+Sitemap: https://surffunexperience.com/sitemap.xml
