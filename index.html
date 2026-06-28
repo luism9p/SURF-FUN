@@ -120,7 +120,8 @@
   <div id="mobile-menu"
     class="fixed inset-0 w-screen h-[100dvh] bg-[#07131D]/95 backdrop-blur-2xl z-[110] flex flex-col items-center justify-center gap-6 opacity-0 pointer-events-none transition-opacity duration-500 md:hidden">
     <button id="close-menu-btn"
-      class="absolute top-8 right-6 text-white hover:text-[#00E5FF] p-2 z-[130] focus:outline-none md:hidden">
+      class="absolute top-8 right-6 text-white hover:text-[#00E5FF] p-2 z-[130] focus:outline-none md:hidden"
+      aria-label="Cerrar menú de navegación">
       <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
       </svg>
@@ -154,7 +155,7 @@
       <div class="animate-hero-slide extracted-style-11">
 
         <!-- Set A -->
-        <img src="img/hero.webp" class="extracted-style-12" alt="Surf Hero Principal">
+        <img src="img/hero.webp" class="extracted-style-12" alt="Surf Hero Principal" fetchpriority="high">
         <img src="img/hero1.webp" class="extracted-style-12" alt="Surf 1">
         <img src="img/hero2.webp" class="extracted-style-12" alt="Surf 2">
         <img src="img/hero3.webp" class="extracted-style-12" alt="Surf 3">
@@ -875,6 +876,7 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.766904100696!2d-81.29110498896057!3d-4.454402847278513!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa33809f8b386267f%3A0xcfef819a63f154bd!2sSurf%20Fun%20Lobitos!5e0!3m2!1ses!2spe!4v1780604506787!5m2!1ses!2spe"
               class="map-editorial-iframe w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700"
+              title="Mapa interactivo con la ubicación de Surf Fun Experience en Lobitos"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
