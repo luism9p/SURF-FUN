@@ -426,7 +426,7 @@
         const cardHtml = `
           <div class="tabla-card transition-all duration-500 ease-in-out transform flex flex-col h-full opacity-100 scale-100 bg-white border border-slate-100 shadow-md rounded-2xl p-4 cursor-pointer hover:-translate-y-1 hover:shadow-xl" data-category="${tabla.cat}" onclick="openModal(${tabla.id})">
             <div class="aspect-[3/4] bg-slate-50 rounded-xl overflow-hidden mb-4 flex items-center justify-center relative group">
-              <img src="img/tablas/${tabla.prefix}1.webp" width="486" height="651" class="object-contain w-full h-full p-2 transition-transform duration-500 group-hover:scale-110" alt="${tabla.name}" loading="lazy" decoding="async">
+              <img src="img/tablas/${tabla.prefix}1.webp" srcset="img/tablas/${tabla.prefix}1-400.webp 400w, img/tablas/${tabla.prefix}1.webp 486w" sizes="(max-width: 767px) 45vw, (max-width: 1023px) 30vw, (max-width: 1279px) 22vw, 18vw" width="486" height="651" class="object-contain w-full h-full p-2 transition-transform duration-500 group-hover:scale-110" alt="${tabla.name}" loading="lazy" decoding="async">
               <div class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
                   <span class="bg-[#00E5FF] text-[#07131D] px-5 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 shadow-lg">+ Ver detalles</span>
               </div>

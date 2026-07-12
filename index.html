@@ -314,8 +314,10 @@
           <!-- ══ Panel 1: Clases Individuales ══ -->
           <div class="extracted-style-32">
             <!-- Foto de fondo — sin filtros, color original -->
-            <img src="img/clases-individuales.webp" alt="Clases Individuales" width="2000" height="1152"
-              class="extracted-style-33" loading="lazy" decoding="async">
+            <img src="img/clases-individuales.webp"
+              srcset="img/clases-individuales-400.webp 400w, img/clases-individuales.webp 2000w" sizes="100vw"
+              alt="Clases Individuales" width="2000" height="1152" class="extracted-style-33" loading="lazy"
+              decoding="async">
             <!-- Capa 1: fondo sólido izquierda → transparente derecha (texto legible) -->
             <div class="extracted-style-34"></div>
             <!-- Capa 2: difuminado de fusión — arranca justo donde el texto termina -->
@@ -344,8 +346,10 @@
 
           <!-- ══ Panel 2: Clases Grupales ══ -->
           <div class="extracted-style-32">
-            <img src="img/clases-grupales2.webp" alt="Clases Grupales" width="2000" height="1145"
-              class="extracted-style-33" loading="lazy" decoding="async">
+            <img src="img/clases-grupales2.webp"
+              srcset="img/clases-grupales2-400.webp 400w, img/clases-grupales2.webp 2000w" sizes="100vw"
+              alt="Clases Grupales" width="2000" height="1145" class="extracted-style-33" loading="lazy"
+              decoding="async">
             <div class="extracted-style-34"></div>
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
@@ -373,8 +377,9 @@
 
           <!-- ══ Panel 3: Surf Trips ══ -->
           <div class="extracted-style-32">
-            <img src="img/surf-trips1.webp" alt="Surf Trips" width="2000" height="1187" class="extracted-style-33"
-              loading="lazy" decoding="async">
+            <img src="img/surf-trips1.webp" srcset="img/surf-trips1-400.webp 400w, img/surf-trips1.webp 2000w"
+              sizes="100vw" alt="Surf Trips" width="2000" height="1187" class="extracted-style-33" loading="lazy"
+              decoding="async">
             <div class="extracted-style-34"></div>
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
@@ -401,8 +406,8 @@
 
           <!-- ══ Panel 4: Videoanálisis ══ -->
           <div class="extracted-style-32">
-            <img src="img/2.webp" alt="Videoanálisis" width="2000" height="1414" class="extracted-style-33"
-              loading="lazy" decoding="async">
+            <img src="img/2.webp" srcset="img/2-400.webp 400w, img/2.webp 2000w" sizes="100vw" alt="Videoanálisis"
+              width="2000" height="1414" class="extracted-style-33" loading="lazy" decoding="async">
             <div class="extracted-style-34"></div>
             <div class="extracted-style-35"></div>
             <!-- Contenido de texto — wrapper alineado con max-w-7xl -->
@@ -757,7 +762,9 @@
             <!-- Info imagen + CTA alquiler -->
             <div class="mt-6 relative rounded-2xl overflow-hidden shadow-xl">
               <div class="aspect-[16/7] relative">
-                <img src="img/local-tablas-2.webp" alt="Tablas de surf" width="1080" height="1080"
+                <img src="img/local-tablas-2.webp"
+                  srcset="img/local-tablas-2-400.webp 400w, img/local-tablas-2.webp 1080w"
+                  sizes="(max-width: 1024px) 100vw, 640px" alt="Tablas de surf" width="1080" height="1080"
                   class="w-full h-full object-cover" loading="lazy" decoding="async">
                 <div class="absolute inset-0 bg-gradient-to-r from-[#07131D]/90 via-[#07131D]/60 to-transparent"></div>
                 <div class="absolute inset-0 flex flex-col justify-center px-6">
@@ -1065,89 +1072,92 @@
   </script>
 
   <!-- Lenis Smooth Scroll -->
-  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js" defer></script>
   <script>
-    const lenis = new Lenis({
-      duration: 1.6,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true,
-      wheelMultiplier: 1.2,
-      smoothTouch: false,
-      touchMultiplier: 2,
-    });
+    let lenis;
+    document.addEventListener('DOMContentLoaded', () => {
+      lenis = new Lenis({
+        duration: 1.6,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        wheelMultiplier: 1.2,
+        smoothTouch: false,
+        touchMultiplier: 2,
+      });
 
-    // Barra de progreso global
-    const progressBar = document.getElementById('scroll-progress');
-    lenis.on('scroll', (e) => {
-      progressBar.style.width = (e.progress * 100) + '%';
-    });
+      // Barra de progreso global
+      const progressBar = document.getElementById('scroll-progress');
+      lenis.on('scroll', (e) => {
+        progressBar.style.width = (e.progress * 100) + '%';
+      });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // =============================================
-    // STICKY HORIZONTAL SCROLL – SERVICIOS
-    // =============================================
-    const scrollSection = document.getElementById('servicios');
-    const track = document.getElementById('track-servicios');
-
-    function updateHorizontalScroll() {
-      if (!scrollSection || !track) return;
-      const offsetTop = scrollSection.offsetTop;
-      const scrollY = window.scrollY;
-      const sectionHeight = scrollSection.offsetHeight;
-      const windowHeight = window.innerHeight;
-
-      if (scrollY >= offsetTop && scrollY <= offsetTop + sectionHeight - windowHeight) {
-        const progress = (scrollY - offsetTop) / (sectionHeight - windowHeight);
-        const maxMove = track.scrollWidth - window.innerWidth;
-        track.style.transform = `translate3d(-${progress * maxMove}px, 0, 0)`;
-      } else if (scrollY < offsetTop) {
-        track.style.transform = `translate3d(0px, 0, 0)`;
-      } else {
-        const maxMove = track.scrollWidth - window.innerWidth;
-        track.style.transform = `translate3d(-${maxMove}px, 0, 0)`;
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
       }
-    }
+      requestAnimationFrame(raf);
 
-    // Fire on native scroll (fallback)
-    window.addEventListener('scroll', updateHorizontalScroll);
-    // Also fire on every Lenis tick so smooth-scroll stays in sync
-    lenis.on('scroll', updateHorizontalScroll);
+      // =============================================
+      // STICKY HORIZONTAL SCROLL – SERVICIOS
+      // =============================================
+      const scrollSection = document.getElementById('servicios');
+      const track = document.getElementById('track-servicios');
 
-    // =============================================
-    // FALLBACK SMOOTH SCROLL NATIVO (Vanilla JS)
-    // =============================================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
+      function updateHorizontalScroll() {
+        if (!scrollSection || !track) return;
+        const offsetTop = scrollSection.offsetTop;
+        const scrollY = window.scrollY;
+        const sectionHeight = scrollSection.offsetHeight;
+        const windowHeight = window.innerHeight;
 
-        const targetElement = document.querySelector(targetId);
-
-        if (targetElement) {
-          e.preventDefault(); // Prevenimos el salto brusco
-
-          const navBar = document.getElementById('navScroll');
-          const navHeight = navBar ? navBar.offsetHeight : 0;
-
-          // Si Lenis está activo, delegamos en él
-          if (typeof lenis !== 'undefined') {
-            lenis.scrollTo(targetElement, { offset: -navHeight });
-          } else {
-            // Fallback nativo
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - navHeight;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth'
-            });
-          }
+        if (scrollY >= offsetTop && scrollY <= offsetTop + sectionHeight - windowHeight) {
+          const progress = (scrollY - offsetTop) / (sectionHeight - windowHeight);
+          const maxMove = track.scrollWidth - window.innerWidth;
+          track.style.transform = `translate3d(-${progress * maxMove}px, 0, 0)`;
+        } else if (scrollY < offsetTop) {
+          track.style.transform = `translate3d(0px, 0, 0)`;
+        } else {
+          const maxMove = track.scrollWidth - window.innerWidth;
+          track.style.transform = `translate3d(-${maxMove}px, 0, 0)`;
         }
+      }
+
+      // Fire on native scroll (fallback)
+      window.addEventListener('scroll', updateHorizontalScroll);
+      // Also fire on every Lenis tick so smooth-scroll stays in sync
+      lenis.on('scroll', updateHorizontalScroll);
+
+      // =============================================
+      // FALLBACK SMOOTH SCROLL NATIVO (Vanilla JS)
+      // =============================================
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+            e.preventDefault(); // Prevenimos el salto brusco
+
+            const navBar = document.getElementById('navScroll');
+            const navHeight = navBar ? navBar.offsetHeight : 0;
+
+            // Si Lenis está activo, delegamos en él
+            if (typeof lenis !== 'undefined') {
+              lenis.scrollTo(targetElement, { offset: -navHeight });
+            } else {
+              // Fallback nativo
+              const elementPosition = targetElement.getBoundingClientRect().top;
+              const offsetPosition = elementPosition + window.scrollY - navHeight;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
       });
     });
   </script>
