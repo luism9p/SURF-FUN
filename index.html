@@ -16,8 +16,8 @@
   <title>Surf Fun Experience | Clases de Surf en Lobitos, Perú</title>
 
   <!-- Preload LCP image (hero) -->
-  <link rel="preload" as="image" href="img/hero.webp"
-    imagesrcset="img/hero-640.webp 640w, img/hero.webp 1000w" imagesizes="(max-width: 768px) 60vw, 900px"
+  <link rel="preload" as="image" href="img/hero.avif" type="image/avif"
+    imagesrcset="img/hero-640.avif 640w, img/hero.avif 1000w" imagesizes="(max-width: 768px) 60vw, 900px"
     fetchpriority="high">
 
   <!-- Fonts -->
@@ -1112,9 +1112,13 @@ footer {
       <div class="animate-hero-slide extracted-style-11">
 
         <!-- Set A -->
-        <img src="img/hero.webp" srcset="img/hero-640.webp 640w, img/hero.webp 1000w"
-          sizes="(max-width: 768px) 60vw, 900px" width="1000" height="667" class="extracted-style-12"
-          alt="Surf Hero Principal" fetchpriority="high" decoding="async">
+        <picture>
+          <source type="image/avif" srcset="img/hero-640.avif 640w, img/hero.avif 1000w"
+            sizes="(max-width: 768px) 60vw, 900px">
+          <img src="img/hero.webp" srcset="img/hero-640.webp 640w, img/hero.webp 1000w"
+            sizes="(max-width: 768px) 60vw, 900px" width="1000" height="667" class="extracted-style-12"
+            alt="Surf Hero Principal" fetchpriority="high" decoding="async">
+        </picture>
         <img src="img/hero1-1280.webp" srcset="img/hero1-640.webp 640w, img/hero1-1280.webp 1280w"
           sizes="(max-width: 768px) 60vw, 900px" width="1280" height="853" class="extracted-style-12" alt="Surf 1"
           loading="lazy" decoding="async">
@@ -1944,10 +1948,12 @@ footer {
 
 
   <!-- <script src="js/bootstrap.bundle.min.js"></script>-->
-  <script src="js/aos.js"></script>
+  <script src="js/aos.js" defer></script>
   <script>
-    AOS.init({
-      duration: 800, // values from 0 to 3000, with step 50ms
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+      });
     });
   </script>
   <script>
@@ -2126,7 +2132,7 @@ footer {
   </script>
 
   <!-- Sistema de i18n -->
-  <script src="js/translations.js"></script>
+  <script src="js/translations.js" defer></script>
 
   <!-- ===================================================
        BOOKING OVERLAY SURF FUN — 3 Pasos
@@ -2365,10 +2371,10 @@ footer {
   </div><!-- /booking-modal -->
 
   <!-- Booking JS -->
-  <script src="js/booking.js"></script>
+  <script src="js/booking.js" defer></script>
 
   <!-- Surf Conditions JS -->
-  <script src="js/surf-conditions.js"></script>
+  <script src="js/surf-conditions.js" defer></script>
 
   <script>
     // Limpiador de URL para anclas (Hashes)
