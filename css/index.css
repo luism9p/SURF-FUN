@@ -88,7 +88,6 @@ h4 {
 }
 
 .pill-lang-selector {
-    display: flex;
     align-items: center;
     gap: 0.15rem;
     font-size: 0.75rem;

@@ -134,8 +134,16 @@ async function updateSurfConditions() {
     }
 }
 
-// Call on load
-document.addEventListener('DOMContentLoaded', updateSurfConditions);
+// Call on load, but off the critical rendering path: run when the browser
+// is idle (or after a short fallback delay) so these third-party fetches
+// don't compete with the LCP paint right at DOMContentLoaded.
+document.addEventListener('DOMContentLoaded', () => {
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(updateSurfConditions, { timeout: 2000 });
+    } else {
+        setTimeout(updateSurfConditions, 200);
+    }
+});
 
 // ==========================================
 // AUTOTRADUCTOR REACTIVO DEL WIDGET DE SURF
