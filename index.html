@@ -979,6 +979,133 @@ header,
 footer {
     max-width: 100vw !important;
 }
+
+/* ===== TESTIMONIOS ===== */
+.testimonio-card {
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+    padding: 1.75rem;
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+}
+
+.testimonio-avatar-a {
+    background-color: #00E5FF;
+    color: #07131D;
+}
+
+.testimonio-avatar-b {
+    background-color: #07131D;
+    color: #00E5FF;
+}
+
+.testimonio-avatar-c {
+    background-color: rgba(0, 229, 255, 0.15);
+    color: #07131D;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+}
+
+.testimonio-stars {
+    color: #00E5FF;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+.testimonio-texto {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.testimonio-leer-mas {
+    color: #00E5FF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    margin-top: 0.65rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.testimonio-google-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Desktop: marquee infinito, mismo mecanismo que .animate-hero-slide */
+@keyframes testimonios-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonios-marquee-viewport {
+    overflow: hidden;
+    padding: 1.5rem 0 2.5rem;
+    margin-bottom: -1rem;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.testimonios-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: 110s linear infinite testimonios-marquee;
+    will-change: transform;
+}
+
+.testimonios-marquee-viewport:hover .testimonios-track {
+    animation-play-state: paused;
+}
+
+/* Mobile: scroll horizontal manual con snap */
+.testimonios-scroll {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0.25rem 2rem;
+    margin-bottom: -1.25rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonios-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonios-scroll .testimonio-card {
+    scroll-snap-align: start;
+    width: 85vw;
+    max-width: 320px;
+}
   </style>
 
   <!-- Force-render hamburguesa — anula cualquier regla residual en móvil -->
@@ -1208,7 +1335,7 @@ footer {
         <div class="flex flex-wrap lg:flex-nowrap gap-6 items-center">
           <div class="w-full lg:w-7/12 lg:text-right" data-aos="fade-right">
             <span class="h5 fw-lighter text-2xl font-thin" style="color:#00E5FF;" data-i18n="why_label">¿Por qué nosotros?</span>
-            <h2 class="display-4 text-3xl sm:text-4xl lg:text-[3.5rem]" style="color:#07131D;" data-i18n="why_title">Disfruta de un ambiente <span
+            <h2 class="display-4 text-3xl/tight sm:text-4xl/tight lg:text-[3.5rem]/[1.15]" style="color:#07131D;" data-i18n="why_title">Disfruta de un ambiente <span
                 class="extracted-style-23">divertido y
                 seguro</span> con profesores certificados y seguridad en todo momento.</h2>
           </div>
@@ -1495,6 +1622,43 @@ footer {
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIOS (Google Maps, curados manualmente) ===== -->
+    <section id="testimonios" class="relative py-24 lg:py-32 overflow-hidden" style="background-color: #f8fafc;">
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="mb-16 md:mb-20 max-w-3xl">
+          <p class="font-bold tracking-widest text-sm uppercase mb-4" style="color: #00E5FF;">Lo que dicen nuestros
+            alumnos</p>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight" style="color: #0f172a;">
+            <span class="testimonio-stars" aria-hidden="true">★★★★★</span>
+            <span id="testimonios-rating">5.0</span> en
+            <span class="italic" style="color: #00E5FF;"><span id="testimonios-total">95</span> reseñas</span> de
+            <svg class="testimonio-google-icon" style="display:inline-block;vertical-align:-0.15em;" viewBox="0 0 48 48"
+              aria-hidden="true">
+              <path fill="#FFC107"
+                d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z" />
+              <path fill="#FF3D00"
+                d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z" />
+              <path fill="#4CAF50"
+                d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z" />
+              <path fill="#1976D2"
+                d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z" />
+            </svg>
+            Google
+          </h2>
+        </div>
+      </div>
+
+      <!-- Desktop: marquee infinito -->
+      <div class="testimonios-marquee-viewport hidden md:block">
+        <div class="testimonios-track" id="testimonios-track-desktop"></div>
+      </div>
+
+      <!-- Mobile: swipe manual con scroll-snap -->
+      <div class="md:hidden px-6">
+        <div class="testimonios-scroll" id="testimonios-track-mobile"></div>
       </div>
     </section>
 
@@ -2132,6 +2296,9 @@ footer {
 
   <!-- Sistema de i18n -->
   <script src="js/translations.js" defer></script>
+
+  <!-- Testimonios JS -->
+  <script src="js/testimonios.js" defer></script>
 
   <!-- ===================================================
        BOOKING OVERLAY SURF FUN — 3 Pasos

@@ -1,0 +1,111 @@
+{
+  "ratingPromedio": 5,
+  "totalResenas": 95,
+  "fuente": "Google Maps",
+  "testimonios": [
+    {
+      "id": 1,
+      "nombre": "Marisol Diaz",
+      "rating": 5,
+      "fecha": "Hace una semana",
+      "texto": "Totalmente recomendado, Bruno y su equipo son muy dedicados, puntuales y tienen una vibra muy linda, te animan en todo momento, están muy enfocados a que mejores y te dan los tips puntuales para que logres tus objetivos! Logré pasar de longboard a tabla de fibra!",
+      "avatarInicial": "M"
+    },
+    {
+      "id": 2,
+      "nombre": "Tanja Ernst",
+      "rating": 5,
+      "fecha": "Hace una semana",
+      "texto": "I highly recommend surf fun in Lobitos. Bruno and his team are really great surf instructors. We learned a lot and had fun in the waves. I would definitely book again some sessions.",
+      "avatarInicial": "T"
+    },
+    {
+      "id": 3,
+      "nombre": "Franziska Peterhans",
+      "rating": 5,
+      "fecha": "Hace una semana",
+      "texto": "We had the opportunity to take two absolutely fantastic surf lessons with Bruno. He was motivating, supportive, and encouraging throughout the experience. Thanks to his guidance, we enjoyed many success moments, and had an amazing time in the water and riding the waves. Bruno's passion and positive attitude made every session both fun and rewarding. We can highly recommend Bruno and his team to anyone looking for a memorable and enjoyable surfing experience! We would definitely come back for more lessons!",
+      "avatarInicial": "F"
+    },
+    {
+      "id": 4,
+      "nombre": "Isaac R",
+      "rating": 5,
+      "fecha": "Hace una semana",
+      "texto": "Very recommended. Bruno best instructor. Was the first time I could get real waves.",
+      "avatarInicial": "I"
+    },
+    {
+      "id": 5,
+      "nombre": "Al Fri",
+      "rating": 5,
+      "fecha": "Hace 2 semanas",
+      "texto": "Can only recommend surf lessons with Bruno! He is an awesome coach with a lot of patience and helped me to stay calm during my surf sessions even in bigger waves or more difficult conditions. He gives you really useful tips and great feedback. You can really feel his passion for surfing and teaching people how to surf. Thanks a lot for all the help!",
+      "avatarInicial": "A"
+    },
+    {
+      "id": 6,
+      "nombre": "Carmen Thompson Perea",
+      "rating": 5,
+      "fecha": "Hace 2 semanas",
+      "texto": "El profesor Bruno y su equipo son los mejores profesores de surf que he tenido nunca. Bruno adapta la clase a tu nivel, experiencia y objetivos, transmitiendo una tranquilidad única en el agua. Lleno de experiencia y buena energía. A mí me han enseñado y ayudado a dar el gran paso de surfear con profe a surfear independientemente de manera correcta y segura. Los mejores 🏄🏻‍♀️",
+      "avatarInicial": "C"
+    },
+    {
+      "id": 7,
+      "nombre": "Carmen",
+      "rating": 5,
+      "fecha": "Hace 2 meses",
+      "texto": "Bruno y su equipo son muy majos y atentos y el material está en buen estado. Tuvimos olas pequeñas pero nos ayudaron a aprovecharlas al máximo. Mención a Moisés también, que nos dio consejos muy útiles e hizo que el tiempo en el agua fuera divertido! Recomendamos! :)",
+      "avatarInicial": "C"
+    },
+    {
+      "id": 8,
+      "nombre": "Emilia Peter",
+      "rating": 5,
+      "fecha": "Hace 2 meses",
+      "texto": "Me sentí muy a gusto con los profesores. Es una escuela de surf excelente, con horarios flexibles y un ambiente genial. Sin duda, disfruté muchísimo las clases y noté una gran mejora en mi nivel durante el curso.",
+      "avatarInicial": "E"
+    },
+    {
+      "id": 9,
+      "nombre": "Edison Cadena",
+      "rating": 5,
+      "fecha": "Hace 9 meses",
+      "texto": "Tuve una experiencia fantástica en surf fun, las clases son excelentes y rápidamente aprendí a pararme en la tabla. Bruno y Kevin son excelentes profesionales y personas, son muy enfocados en la técnica de acuerdo al nivel y condiciones de cada persona, así como en su seguridad. Espero volver a tomar clases en surf fun y lo recomiendo totalmente para quienes les interese aprender a surfear y aprender de la cultura surf en Lobitos.",
+      "avatarInicial": "E"
+    },
+    {
+      "id": 10,
+      "nombre": "Blanca López Bassa",
+      "rating": 5,
+      "fecha": "Hace 9 meses",
+      "texto": "100% recomendado! Bruno es un profesor excelente: atento, enseña bien la técnica y coge todas las olas porque conoce muy bien lobitos por ser local. Aprendí mucho y la pasé genial.",
+      "avatarInicial": "B"
+    },
+    {
+      "id": 11,
+      "nombre": "Maredeys Martinez",
+      "rating": 5,
+      "fecha": "Hace un año",
+      "texto": "El instructor de Surf Fun Lobitos es excepcional. Está muy bien capacitado y tiene un enfoque excelente es amable y paciente ideal tanto para principiantes como para surfistas avanzados que buscan perfeccionar sus habilidades. Su prioridad siempre es la seguridad y el progreso de los estudiantes. Yo me disfruté cada clase, cada experiencia, definitivamente volvería a tomar clases con SURF FUN LOBITOS. 10/10",
+      "avatarInicial": "M"
+    },
+    {
+      "id": 12,
+      "nombre": "Cyril",
+      "rating": 5,
+      "fecha": "Hace un año",
+      "texto": "Bruno nos ha ayudado a mejorar nuestra manera de surfear, motivándonos con su amabilidad, su sonrisa y su experiencia. Hemos tomado clases con él más de 10 días y cada vez nos hemos sentido más confiados con el mar y las olas, porque cada clase era diferente en función de la marea, y nos hacía experimentar nuevas experiencias con el fin de mejorar. Nos hubiera gustado seguir en Lobitos y poder mejorar a su lado. Así que lo recomendamos a todos aquellos que quieran aprender o mejorar su manera de surfear.",
+      "avatarInicial": "C"
+    },
+    {
+      "id": 13,
+      "nombre": "Eli Enwa",
+      "rating": 5,
+      "fecha": "Hace un año",
+      "texto": "Bruno es un excelente profesor, fue muy importante en mi proceso de aprendizaje. Me transmitió mucha confianza en el agua, lo más importante, me divertí y sentí que evolucioné en poquísimo tiempo. Ya con ganas de volver a Lobitos. Super recomiendo!",
+      "avatarInicial": "E"
+    }
+  ]
+}

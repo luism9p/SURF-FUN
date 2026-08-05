@@ -849,3 +849,130 @@ header,
 footer {
     max-width: 100vw !important;
 }
+
+/* ===== TESTIMONIOS ===== */
+.testimonio-card {
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+    padding: 1.75rem;
+    width: 320px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio-avatar {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+    flex-shrink: 0;
+}
+
+.testimonio-avatar-a {
+    background-color: #00E5FF;
+    color: #07131D;
+}
+
+.testimonio-avatar-b {
+    background-color: #07131D;
+    color: #00E5FF;
+}
+
+.testimonio-avatar-c {
+    background-color: rgba(0, 229, 255, 0.15);
+    color: #07131D;
+    border: 1px solid rgba(0, 229, 255, 0.35);
+}
+
+.testimonio-stars {
+    color: #00E5FF;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+}
+
+.testimonio-texto {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    flex: 1;
+}
+
+.testimonio-leer-mas {
+    color: #00E5FF;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    margin-top: 0.65rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    text-align: left;
+    align-self: flex-start;
+}
+
+.testimonio-google-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* Desktop: marquee infinito, mismo mecanismo que .animate-hero-slide */
+@keyframes testimonios-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonios-marquee-viewport {
+    overflow: hidden;
+    padding: 1.5rem 0 2.5rem;
+    margin-bottom: -1rem;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.testimonios-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: 110s linear infinite testimonios-marquee;
+    will-change: transform;
+}
+
+.testimonios-marquee-viewport:hover .testimonios-track {
+    animation-play-state: paused;
+}
+
+/* Mobile: scroll horizontal manual con snap */
+.testimonios-scroll {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem 0.25rem 2rem;
+    margin-bottom: -1.25rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.testimonios-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonios-scroll .testimonio-card {
+    scroll-snap-align: start;
+    width: 85vw;
+    max-width: 320px;
+}
